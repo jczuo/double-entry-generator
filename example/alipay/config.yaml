@@ -1,37 +1,59 @@
-defaultMinusAccount: Assets:FIXME
+defaultMinusAccount: Assets:Zuo:AliPay:Wallet
 defaultPlusAccount: Expenses:FIXME
 defaultCurrency: CNY
 title: 测试
 alipay:
   rules:
     # 泛匹配结果应当放在前面
+
     - type: 收入 # 其他转账收款
       targetAccount: Income:FIXME
-      methodAccount: Assets:Alipay
+      methodAccount: Assets:Zuo:AliPay:Wallet
 
     - type: 收入 # 收款码收款
       item: 商品
       targetAccount: Income:Alipay:ShouKuanMa
-      methodAccount: Assets:Alipay
+      methodAccount: Assets:Zuo:AliPay:Wallet
 
     - category: 日用百货
-      minPrice: 10
-      targetAccount: Expenses:Groceries
+      targetAccount: Expenses:Misc
     - category: 日用百货
-      minPrice: 0
-      maxPrice: 9.99
-      targetAccount: Expenses:Food:Drink
+      peer: 沃尔玛
+      targetAccount: Expenses:Food:Groceries
     - category: 餐饮美食
-      time: 11:00-14:00
-      targetAccount: Expenses:Food:Lunch
-    - category: 餐饮美食
-      time: 16:00-22:00
-      targetAccount: Expenses:Food:Dinner
+      item: 外卖
+      targetAccount: Expenses:Food:Takeout
 
+    - category: 生活服务
+      type: 支出
+      item: 寄件费
+      targetAccount: Expenses:Comm:Express
+    - category: 商业服务
+      type: 支出
+      item: 基础软件服务费
+      targetAccount: Expenses:Education:Software
+    - category: 交通出行
+      targetAccount: Expenses:Transport:Taxi
+    - category: 文化休闲
+      targetAccount: Expenses:Leisure:Entertainment
+    - category: 运动户外
+      targetAccount: Expenses:Leisure:Sports
+    - category: 保险
+      item: 好医保
+      targetAccount: Expenses:Insurance:Health:Medical
+
+    - peer: 上海燃气有限公司
+      targetAccount: Expenses:Home:Utilities:Gas
+    - peer: 国网上海市电力公司(缴费)
+      targetAccount: Expenses:Home:Utilities:Electricity
+    - peer: 上海浦东威立雅自来水有限公司
+      targetAccount: Expenses:Home:Utilities:Water
     - peer: 滴露
       targetAccount: Expenses:Groceries
     - peer: 苏宁
       targetAccount: Expenses:Electronics
+    - peer: 星巴克
+      targetAccount: Expenses:Food:Drinks
     - item: 相互宝
       targetAccount: Expenses:Insurance
 
@@ -40,20 +62,25 @@ alipay:
       methodAccount: Assets:Alipay
     - method: 余额宝
       fullMatch: true
-      methodAccount: Assets:Alipay
-    - method: 交通银行信用卡(7449)
+      methodAccount: Assets:Zuo:AliPay:Saving
+    - method: 浦发银行信用卡(1765)
       fullMatch: true
-      methodAccount: Liabilities:CC:COMM:7449
+      methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
 
     # 交易类型为其他
-    - type: 其他
+    - type: 不计收支 #余额宝收入
       item: 收益发放
-      methodAccount: Income:Alipay:YuEBao:PnL
-      targetAccount: Assets:Alipay
+      methodAccount: Income:Zuo:AliPay:Interest
+      targetAccount: Assets:Zuo:AliPay:Saving
     - type: 其他
       item: 余额宝-单次转入
-      targetAccount: Assets:Alipay
-      methodAccount: Assets:Alipay
+      targetAccount: Assets:Zuo:AliPay:Saving
+      methodAccount: Assets:Zuo:AliPay:Wallet
+
+    - type: 不计收支
+      item: 余额宝-自动转入
+      targetAccount: Assets:Zuo:AliPay:Saving
+      methodAccount: Assets:Zuo:AliPay:Wallet
 
     - peer: 基金
       type: 其他
@@ -77,3 +104,8 @@ alipay:
       methodAccount: Assets:Alipay:Invest:Fund
       targetAccount: Assets:Alipay
       pnlAccount: Income:Alipay:Invest:PnL
+
+    - category: 收入 
+      status: 交易关闭 # 交易关闭忽略
+      ignore: true
+
