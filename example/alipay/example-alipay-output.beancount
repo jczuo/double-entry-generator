@@ -4,19 +4,30 @@ option "operating_currency" "CNY"
 1970-01-01 open Assets:Alipay
 1970-01-01 open Assets:Alipay:Invest:Fund
 1970-01-01 open Assets:Alipay:Invest:Gold
-1970-01-01 open Assets:FIXME
+1970-01-01 open Assets:Zuo:AliPay:Saving
+1970-01-01 open Assets:Zuo:AliPay:Wallet
+1970-01-01 open Expenses:Comm:Express
+1970-01-01 open Expenses:Education:Software
 1970-01-01 open Expenses:Electronics
 1970-01-01 open Expenses:FIXME
-1970-01-01 open Expenses:Food:Dinner
-1970-01-01 open Expenses:Food:Drink
-1970-01-01 open Expenses:Food:Lunch
+1970-01-01 open Expenses:Food:Drinks
+1970-01-01 open Expenses:Food:Groceries
+1970-01-01 open Expenses:Food:Takeout
 1970-01-01 open Expenses:Groceries
+1970-01-01 open Expenses:Home:Utilities:Electricity
+1970-01-01 open Expenses:Home:Utilities:Gas
+1970-01-01 open Expenses:Home:Utilities:Water
 1970-01-01 open Expenses:Insurance
+1970-01-01 open Expenses:Insurance:Health:Medical
+1970-01-01 open Expenses:Leisure:Entertainment
+1970-01-01 open Expenses:Leisure:Sports
+1970-01-01 open Expenses:Misc
+1970-01-01 open Expenses:Transport:Taxi
 1970-01-01 open Income:Alipay:Invest:PnL
 1970-01-01 open Income:Alipay:ShouKuanMa
-1970-01-01 open Income:Alipay:YuEBao:PnL
 1970-01-01 open Income:FIXME
-1970-01-01 open Liabilities:CC:COMM:7449
+1970-01-01 open Income:Zuo:AliPay:Interest
+1970-01-01 open Liabilities:Zuo:CreditCard:SPDB:1765
 
 2025-02-01 * "余额宝" "余额宝-自动转入"
 	category: "投资理财"
@@ -27,8 +38,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 254.68 CNY
-	Assets:FIXME -254.68 CNY
+	Assets:Zuo:AliPay:Saving 254.68 CNY
+	Assets:Zuo:AliPay:Wallet -254.68 CNY
 
 2025-02-02 * "滴滴出行" "滴滴快车-杨师傅-02月02日行程"
 	category: "交通出行"
@@ -39,8 +50,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 30.90 CNY
-	Assets:Alipay -30.90 CNY
+	Expenses:Transport:Taxi 30.90 CNY
+	Assets:Zuo:AliPay:Saving -30.90 CNY
 
 2025-02-02 * "星巴克" "星巴克啡快"
 	category: "餐饮美食"
@@ -51,8 +62,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 80.00 CNY
-	Assets:Alipay -80.00 CNY
+	Expenses:Food:Drinks 80.00 CNY
+	Assets:Zuo:AliPay:Saving -80.00 CNY
 
 2025-02-02 * "滴滴出行" "滴滴快车-刘师傅-02月02日行程"
 	category: "交通出行"
@@ -63,8 +74,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 115.08 CNY
-	Assets:Alipay -115.08 CNY
+	Expenses:Transport:Taxi 115.08 CNY
+	Assets:Zuo:AliPay:Saving -115.08 CNY
 
 2025-02-03 * "淘票**光" "《哪吒之魔童闹海》保利国际影城上海世博店电影票"
 	category: "文化休闲"
@@ -75,19 +86,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 277.00 CNY
-	Assets:FIXME -277.00 CNY
-
-2025-02-04 * "****s" "美的紫外护理机MXV-01"
-	category: "收入"
-	merchantId: "T200P2456770047610186571"
-	orderId: "2025020423001124961456690827"
-	payTime: "2025-02-04 19:38:46 +0800 CST"
-	source: "支付宝"
-	status: "交易关闭"
-	type: "收入"
-	Assets:Alipay 90.00 CNY
-	Income:FIXME -90.00 CNY
+	Expenses:Leisure:Entertainment 277.00 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -277.00 CNY
 
 2025-02-04 * "上海燃气有限公司" "燃气费-*德珍-潍坊十村"
 	category: "充值缴费"
@@ -98,8 +98,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 69.00 CNY
-	Assets:Alipay -69.00 CNY
+	Expenses:Home:Utilities:Gas 69.00 CNY
+	Assets:Zuo:AliPay:Saving -69.00 CNY
 
 2025-02-06 * "天弘基金管理有限公司" "余额宝-2025.02.05-收益发放"
 	category: "投资理财"
@@ -109,19 +109,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 0.01 CNY
-	Assets:Alipay -0.01 CNY
-
-2025-02-06 * "****f" "美的紫外护理机MXV-01"
-	category: "收入"
-	merchantId: "T200P2458595534114088768"
-	orderId: "2025020622001147521419744189"
-	payTime: "2025-02-06 08:36:35 +0800 CST"
-	source: "支付宝"
-	status: "交易成功"
-	type: "收入"
-	Assets:Alipay 50.00 CNY
-	Income:FIXME -50.00 CNY
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
 
 2025-02-06 * "杭州菜鸟供应链管理有限公司" "菜鸟裹裹-寄件费_23741103_LP00710647480476"
 	category: "生活服务"
@@ -132,8 +121,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 11.50 CNY
-	Assets:Alipay -11.50 CNY
+	Expenses:Comm:Express 11.50 CNY
+	Assets:Zuo:AliPay:Saving -11.50 CNY
 
 2025-02-07 * "天弘基金管理有限公司" "余额宝-2025.02.06-收益发放"
 	category: "投资理财"
@@ -143,8 +132,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 0.01 CNY
-	Assets:Alipay -0.01 CNY
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
 
 2025-02-07 * "上海燃气有限公司" "燃气费自动缴费-*庆国-山泉花苑-根据每期出账后自动缴费"
 	category: "充值缴费"
@@ -155,8 +144,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 201.00 CNY
-	Assets:FIXME -201.00 CNY
+	Expenses:Home:Utilities:Gas 201.00 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -201.00 CNY
 
 2025-02-07 * "国网上海市电力公司(缴费)" "1月电费自动缴费-*庆国-山泉花苑-根据每期出账后自动缴费"
 	category: "充值缴费"
@@ -167,8 +156,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 513.40 CNY
-	Assets:FIXME -513.40 CNY
+	Expenses:Home:Utilities:Electricity 513.40 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -513.40 CNY
 
 2025-02-07 * "国网上海市电力公司(缴费)" "1月电费自动缴费-*建春-潍坊十村-根据每期出账后自动缴费"
 	category: "充值缴费"
@@ -179,8 +168,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 42.00 CNY
-	Assets:Alipay -42.00 CNY
+	Expenses:Home:Utilities:Electricity 42.00 CNY
+	Assets:Zuo:AliPay:Saving -42.00 CNY
 
 2025-02-07 * "饿了么" "大米先生(建滔广场店)外卖订单"
 	category: "餐饮美食"
@@ -191,8 +180,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:Food:Lunch 28.90 CNY
-	Assets:Alipay -28.90 CNY
+	Expenses:Food:Takeout 28.90 CNY
+	Assets:Zuo:AliPay:Saving -28.90 CNY
 
 2025-02-08 * "天弘基金管理有限公司" "余额宝-2025.02.07-收益发放"
 	category: "投资理财"
@@ -202,8 +191,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 0.01 CNY
-	Assets:Alipay -0.01 CNY
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
 
 2025-02-09 * "天弘基金管理有限公司" "余额宝-2025.02.08-收益发放"
 	category: "投资理财"
@@ -213,8 +202,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 0.01 CNY
-	Assets:Alipay -0.01 CNY
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
 
 2025-02-09 * "上海浦东威立雅自来水有限公司" "2月水费自动缴费-山泉花苑-根据每期出账后自动缴费"
 	category: "充值缴费"
@@ -225,8 +214,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 114.60 CNY
-	Assets:FIXME -114.60 CNY
+	Expenses:Home:Utilities:Water 114.60 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -114.60 CNY
 
 2025-02-10 * "天弘基金管理有限公司" "余额宝-2025.02.09-收益发放"
 	category: "投资理财"
@@ -236,8 +225,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 0.01 CNY
-	Assets:Alipay -0.01 CNY
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
 
 2025-02-11 * "思壮**店" "【活动价】李宁儿童竞速跳绳小学生专用初学钢丝绳子专业体育考试不打结中考"
 	category: "运动户外"
@@ -248,19 +237,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 51.12 CNY
-	Assets:Alipay -51.12 CNY
-
-2025-02-12 * "**弘" "联想thinkplus都市流行双肩包，防盗自动锁拉链，全新黑"
-	category: "收入"
-	merchantId: "T200P2464850606864528153"
-	orderId: "2025021222001149521430626116"
-	payTime: "2025-02-12 11:33:09 +0800 CST"
-	source: "支付宝"
-	status: "交易成功"
-	type: "收入"
-	Assets:Alipay 35.59 CNY
-	Income:FIXME -35.59 CNY
+	Expenses:Leisure:Sports 51.12 CNY
+	Assets:Zuo:AliPay:Saving -51.12 CNY
 
 2025-02-12 * "饿了么" "东池便当(建滔广场店)外卖订单"
 	category: "餐饮美食"
@@ -271,8 +249,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:Food:Lunch 28.90 CNY
-	Assets:FIXME -28.90 CNY
+	Expenses:Food:Takeout 28.90 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -28.90 CNY
 
 2025-02-13 * "杭州闲鱼信息技术有限公司" "分账-基础软件服务费(2458595534114088768)扣款"
 	category: "商业服务"
@@ -281,8 +259,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 0.30 CNY
-	Assets:FIXME -0.30 CNY
+	Expenses:Education:Software 0.30 CNY
+	Assets:Zuo:AliPay:Wallet -0.30 CNY
 
 2025-02-14 * "余额宝" "余额宝-自动转入"
 	category: "投资理财"
@@ -293,8 +271,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 49.70 CNY
-	Assets:FIXME -49.70 CNY
+	Assets:Zuo:AliPay:Saving 49.70 CNY
+	Assets:Zuo:AliPay:Wallet -49.70 CNY
 
 2025-02-15 * "沃尔玛（中国）投资有限公司" "商品"
 	category: "日用百货"
@@ -305,8 +283,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:Groceries 361.30 CNY
-	Assets:FIXME -361.30 CNY
+	Expenses:Food:Groceries 361.30 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -361.30 CNY
 
 2025-02-15 * "杭州菜鸟供应链管理有限公司" "菜鸟裹裹-寄件费_23741103_LP00712628111756"
 	category: "生活服务"
@@ -317,8 +295,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 11.00 CNY
-	Assets:Alipay -11.00 CNY
+	Expenses:Comm:Express 11.00 CNY
+	Assets:Zuo:AliPay:Saving -11.00 CNY
 
 2025-02-15 * "滴滴出行" "滴滴快车-黄师傅-02月15日行程"
 	category: "交通出行"
@@ -329,8 +307,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 15.90 CNY
-	Assets:Alipay -15.90 CNY
+	Expenses:Transport:Taxi 15.90 CNY
+	Assets:Zuo:AliPay:Saving -15.90 CNY
 
 2025-02-16 * "上海浦东威立雅自来水有限公司" "2月水费自动缴费-潍坊十村-根据每期出账后自动缴费"
 	category: "充值缴费"
@@ -341,8 +319,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 36.50 CNY
-	Assets:FIXME -36.50 CNY
+	Expenses:Home:Utilities:Water 36.50 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -36.50 CNY
 
 2025-02-17 * "中国人民健康保险股份有限公司" "2025.2月保费缴清-好医保·长期医疗-**春"
 	category: "保险"
@@ -353,8 +331,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 50.94 CNY
-	Assets:FIXME -50.94 CNY
+	Expenses:Insurance:Health:Medical 50.94 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -50.94 CNY
 
 2025-02-18 * "杭州闲鱼信息技术有限公司" "分账-基础软件服务费(2464850606864528153)扣款"
 	category: "商业服务"
@@ -363,8 +341,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 0.21 CNY
-	Assets:FIXME -0.21 CNY
+	Expenses:Education:Software 0.21 CNY
+	Assets:Zuo:AliPay:Wallet -0.21 CNY
 
 2025-02-19 * "余额宝" "余额宝-自动转入"
 	category: "投资理财"
@@ -375,8 +353,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "不计收支"
-	Expenses:FIXME 35.38 CNY
-	Assets:FIXME -35.38 CNY
+	Assets:Zuo:AliPay:Saving 35.38 CNY
+	Assets:Zuo:AliPay:Wallet -35.38 CNY
 
 2025-02-22 * "t***4" "原装正品Applewatch苹果手表表带尼龙回环正品苹果原装"
 	category: "日用百货"
@@ -387,8 +365,8 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:Groceries 33.22 CNY
-	Assets:Alipay -33.22 CNY
+	Expenses:Misc 33.22 CNY
+	Assets:Zuo:AliPay:Saving -33.22 CNY
 
 2025-02-22 * "中国计算机学会" "GESP2025年3月认证"
 	category: "公共服务"
@@ -400,7 +378,7 @@ option "operating_currency" "CNY"
 	status: "交易成功"
 	type: "支出"
 	Expenses:FIXME 300.00 CNY
-	Assets:FIXME -300.00 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -300.00 CNY
 
 2025-02-23 * "滴滴出行" "滴滴快车-仇师傅-02月23日行程"
 	category: "交通出行"
@@ -411,6 +389,6 @@ option "operating_currency" "CNY"
 	source: "支付宝"
 	status: "交易成功"
 	type: "支出"
-	Expenses:FIXME 112.50 CNY
-	Assets:FIXME -112.50 CNY
+	Expenses:Transport:Taxi 112.50 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -112.50 CNY
 
