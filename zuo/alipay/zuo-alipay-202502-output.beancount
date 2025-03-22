@@ -1,0 +1,394 @@
+option "title" "测试"
+option "operating_currency" "CNY"
+
+1970-01-01 open Assets:Alipay
+1970-01-01 open Assets:Alipay:Invest:Fund
+1970-01-01 open Assets:Alipay:Invest:Gold
+1970-01-01 open Assets:Zuo:AliPay:Saving
+1970-01-01 open Assets:Zuo:AliPay:Wallet
+1970-01-01 open Expenses:Comm:Express
+1970-01-01 open Expenses:Education:Software
+1970-01-01 open Expenses:Electronics
+1970-01-01 open Expenses:FIXME
+1970-01-01 open Expenses:Food:Drinks
+1970-01-01 open Expenses:Food:Groceries
+1970-01-01 open Expenses:Food:Takeout
+1970-01-01 open Expenses:Groceries
+1970-01-01 open Expenses:Home:Utilities:Electricity
+1970-01-01 open Expenses:Home:Utilities:Gas
+1970-01-01 open Expenses:Home:Utilities:Water
+1970-01-01 open Expenses:Insurance
+1970-01-01 open Expenses:Insurance:Health:Medical
+1970-01-01 open Expenses:Leisure:Entertainment
+1970-01-01 open Expenses:Leisure:Sports
+1970-01-01 open Expenses:Misc
+1970-01-01 open Expenses:Transport:Taxi
+1970-01-01 open Income:Alipay:Invest:PnL
+1970-01-01 open Income:Alipay:ShouKuanMa
+1970-01-01 open Income:FIXME
+1970-01-01 open Income:Zuo:AliPay:Interest
+1970-01-01 open Liabilities:Zuo:CreditCard:SPDB:1765
+
+2025-02-01 * "余额宝" "余额宝-自动转入"
+	category: "投资理财"
+	merchantId: "20250201210500501000650043399140"
+	method: "账户余额"
+	orderId: "20250201210500101000650068094338"
+	payTime: "2025-02-01 01:20:12 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 254.68 CNY
+	Assets:Zuo:AliPay:Wallet -254.68 CNY
+
+2025-02-02 * "滴滴出行" "滴滴快车-杨师傅-02月02日行程"
+	category: "交通出行"
+	merchantId: "210_202502028252594101318287"
+	method: "余额宝"
+	orderId: "2025020223001432651443261565"
+	payTime: "2025-02-02 14:58:29 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Transport:Taxi 30.90 CNY
+	Assets:Zuo:AliPay:Saving -30.90 CNY
+
+2025-02-02 * "星巴克" "星巴克啡快"
+	category: "餐饮美食"
+	merchantId: "25020215071000107028"
+	method: "余额宝"
+	orderId: "2025020222001432651445655536"
+	payTime: "2025-02-02 15:07:48 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Food:Drinks 80.00 CNY
+	Assets:Zuo:AliPay:Saving -80.00 CNY
+
+2025-02-02 * "滴滴出行" "滴滴快车-刘师傅-02月02日行程"
+	category: "交通出行"
+	merchantId: "210_202502023728955901878657"
+	method: "余额宝"
+	orderId: "2025020223001432651446163527"
+	payTime: "2025-02-02 23:29:58 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Transport:Taxi 115.08 CNY
+	Assets:Zuo:AliPay:Saving -115.08 CNY
+
+2025-02-03 * "淘票**光" "《哪吒之魔童闹海》保利国际影城上海世博店电影票"
+	category: "文化休闲"
+	merchantId: "T150P4219693273312740311"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025020322001132651447500085"
+	payTime: "2025-02-03 10:58:39 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Leisure:Entertainment 277.00 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -277.00 CNY
+
+2025-02-04 * "上海燃气有限公司" "燃气费-*德珍-潍坊十村"
+	category: "充值缴费"
+	merchantId: "23543676"
+	method: "余额宝"
+	orderId: "2025020400003001650037340881"
+	payTime: "2025-02-04 21:30:19 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Home:Utilities:Gas 69.00 CNY
+	Assets:Zuo:AliPay:Saving -69.00 CNY
+
+2025-02-06 * "天弘基金管理有限公司" "余额宝-2025.02.05-收益发放"
+	category: "投资理财"
+	method: "余额宝"
+	orderId: "20250206317888729651"
+	payTime: "2025-02-06 03:23:14 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
+
+2025-02-06 * "杭州菜鸟供应链管理有限公司" "菜鸟裹裹-寄件费_23741103_LP00710647480476"
+	category: "生活服务"
+	merchantId: "CN_V1_601901936355270996"
+	method: "余额宝"
+	orderId: "2025020622001432651458113707"
+	payTime: "2025-02-06 13:01:19 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Comm:Express 11.50 CNY
+	Assets:Zuo:AliPay:Saving -11.50 CNY
+
+2025-02-07 * "天弘基金管理有限公司" "余额宝-2025.02.06-收益发放"
+	category: "投资理财"
+	method: "余额宝"
+	orderId: "20250207327746790651"
+	payTime: "2025-02-07 05:13:45 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
+
+2025-02-07 * "上海燃气有限公司" "燃气费自动缴费-*庆国-山泉花苑-根据每期出账后自动缴费"
+	category: "充值缴费"
+	merchantId: "21035049"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025020700003001650037785237"
+	payTime: "2025-02-07 10:16:35 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Home:Utilities:Gas 201.00 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -201.00 CNY
+
+2025-02-07 * "国网上海市电力公司(缴费)" "1月电费自动缴费-*庆国-山泉花苑-根据每期出账后自动缴费"
+	category: "充值缴费"
+	merchantId: "3100211185020"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025020700003001650037783420"
+	payTime: "2025-02-07 10:29:31 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Home:Utilities:Electricity 513.40 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -513.40 CNY
+
+2025-02-07 * "国网上海市电力公司(缴费)" "1月电费自动缴费-*建春-潍坊十村-根据每期出账后自动缴费"
+	category: "充值缴费"
+	merchantId: "3100210136668"
+	method: "余额宝"
+	orderId: "2025020700003001650037789007"
+	payTime: "2025-02-07 10:31:18 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Home:Utilities:Electricity 42.00 CNY
+	Assets:Zuo:AliPay:Saving -42.00 CNY
+
+2025-02-07 * "饿了么" "大米先生(建滔广场店)外卖订单"
+	category: "餐饮美食"
+	merchantId: "13120600725020777199276699286"
+	method: "余额宝"
+	orderId: "2025020723001132651459268400"
+	payTime: "2025-02-07 12:48:43 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Food:Takeout 28.90 CNY
+	Assets:Zuo:AliPay:Saving -28.90 CNY
+
+2025-02-08 * "天弘基金管理有限公司" "余额宝-2025.02.07-收益发放"
+	category: "投资理财"
+	method: "余额宝"
+	orderId: "20250208333143221651"
+	payTime: "2025-02-08 05:53:32 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
+
+2025-02-09 * "天弘基金管理有限公司" "余额宝-2025.02.08-收益发放"
+	category: "投资理财"
+	method: "余额宝"
+	orderId: "20250209338855958651"
+	payTime: "2025-02-09 04:43:35 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
+
+2025-02-09 * "上海浦东威立雅自来水有限公司" "2月水费自动缴费-山泉花苑-根据每期出账后自动缴费"
+	category: "充值缴费"
+	merchantId: "948891203"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025020900003001650038133422"
+	payTime: "2025-02-09 19:12:13 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Home:Utilities:Water 114.60 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -114.60 CNY
+
+2025-02-10 * "天弘基金管理有限公司" "余额宝-2025.02.09-收益发放"
+	category: "投资理财"
+	method: "余额宝"
+	orderId: "20250210343974678651"
+	payTime: "2025-02-10 05:28:31 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 0.01 CNY
+	Income:Zuo:AliPay:Interest -0.01 CNY
+
+2025-02-11 * "思壮**店" "【活动价】李宁儿童竞速跳绳小学生专用初学钢丝绳子专业体育考试不打结中考"
+	category: "运动户外"
+	merchantId: "T200P4228741188688740311"
+	method: "余额宝"
+	orderId: "2025021122001132651419570840"
+	payTime: "2025-02-11 22:00:48 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Leisure:Sports 51.12 CNY
+	Assets:Zuo:AliPay:Saving -51.12 CNY
+
+2025-02-12 * "饿了么" "东池便当(建滔广场店)外卖订单"
+	category: "餐饮美食"
+	merchantId: "13120600725021255821500699286"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025021222001132651418655749"
+	payTime: "2025-02-12 12:25:15 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Food:Takeout 28.90 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -28.90 CNY
+
+2025-02-13 * "杭州闲鱼信息技术有限公司" "分账-基础软件服务费(2458595534114088768)扣款"
+	category: "商业服务"
+	orderId: "2025021310032004520216612902"
+	payTime: "2025-02-13 13:31:04 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Education:Software 0.30 CNY
+	Assets:Zuo:AliPay:Wallet -0.30 CNY
+
+2025-02-14 * "余额宝" "余额宝-自动转入"
+	category: "投资理财"
+	merchantId: "20250214210500501000650061072532"
+	method: "账户余额"
+	orderId: "20250214210500101000650075425069"
+	payTime: "2025-02-14 00:33:04 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 49.70 CNY
+	Assets:Zuo:AliPay:Wallet -49.70 CNY
+
+2025-02-15 * "沃尔玛（中国）投资有限公司" "商品"
+	category: "日用百货"
+	merchantId: "X2689417463775541647X100"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025021522001432651428722839"
+	payTime: "2025-02-15 00:41:08 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Food:Groceries 361.30 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -361.30 CNY
+
+2025-02-15 * "杭州菜鸟供应链管理有限公司" "菜鸟裹裹-寄件费_23741103_LP00712628111756"
+	category: "生活服务"
+	merchantId: "CN_V1_601928097421850358"
+	method: "余额宝"
+	orderId: "2025021522001432651428616590"
+	payTime: "2025-02-15 09:55:17 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Comm:Express 11.00 CNY
+	Assets:Zuo:AliPay:Saving -11.00 CNY
+
+2025-02-15 * "滴滴出行" "滴滴快车-黄师傅-02月15日行程"
+	category: "交通出行"
+	merchantId: "210_202502153734225301850522"
+	method: "余额宝"
+	orderId: "2025021523001432651430719169"
+	payTime: "2025-02-15 11:54:59 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Transport:Taxi 15.90 CNY
+	Assets:Zuo:AliPay:Saving -15.90 CNY
+
+2025-02-16 * "上海浦东威立雅自来水有限公司" "2月水费自动缴费-潍坊十村-根据每期出账后自动缴费"
+	category: "充值缴费"
+	merchantId: "940500127"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025021600003001650038907309"
+	payTime: "2025-02-16 20:09:23 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Home:Utilities:Water 36.50 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -36.50 CNY
+
+2025-02-17 * "中国人民健康保险股份有限公司" "2025.2月保费缴清-好医保·长期医疗-**春"
+	category: "保险"
+	merchantId: "202502171100300700700011108975"
+	method: "浦发银行信用卡(1765)"
+	orderId: "20250217519489306505"
+	payTime: "2025-02-17 11:45:35 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Insurance:Health:Medical 50.94 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -50.94 CNY
+
+2025-02-18 * "杭州闲鱼信息技术有限公司" "分账-基础软件服务费(2464850606864528153)扣款"
+	category: "商业服务"
+	orderId: "2025021810032004520282109907"
+	payTime: "2025-02-18 17:23:54 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Education:Software 0.21 CNY
+	Assets:Zuo:AliPay:Wallet -0.21 CNY
+
+2025-02-19 * "余额宝" "余额宝-自动转入"
+	category: "投资理财"
+	merchantId: "20250219210500501000650066239832"
+	method: "账户余额"
+	orderId: "20250219210500101000650077994893"
+	payTime: "2025-02-19 00:30:17 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "不计收支"
+	Assets:Zuo:AliPay:Saving 35.38 CNY
+	Assets:Zuo:AliPay:Wallet -35.38 CNY
+
+2025-02-22 * "t***4" "原装正品Applewatch苹果手表表带尼龙回环正品苹果原装"
+	category: "日用百货"
+	merchantId: "T200P4240717093120740311"
+	method: "余额宝"
+	orderId: "2025022222001132651406344956"
+	payTime: "2025-02-22 14:48:50 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Misc 33.22 CNY
+	Assets:Zuo:AliPay:Saving -33.22 CNY
+
+2025-02-22 * "中国计算机学会" "GESP2025年3月认证"
+	category: "公共服务"
+	merchantId: "20250222-0323-bef9bc9f4dd246d38d"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025022222001432651403681697"
+	payTime: "2025-02-22 20:38:27 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:FIXME 300.00 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -300.00 CNY
+
+2025-02-23 * "滴滴出行" "滴滴快车-仇师傅-02月23日行程"
+	category: "交通出行"
+	merchantId: "210_202502233738013201967943"
+	method: "浦发银行信用卡(1765)"
+	orderId: "2025022323001432651413265979"
+	payTime: "2025-02-23 19:44:45 +0800 CST"
+	source: "支付宝"
+	status: "交易成功"
+	type: "支出"
+	Expenses:Transport:Taxi 112.50 CNY
+	Liabilities:Zuo:CreditCard:SPDB:1765 -112.50 CNY
+
