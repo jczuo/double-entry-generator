@@ -15,54 +15,97 @@ alipay:
       targetAccount: Income:Alipay:ShouKuanMa
       methodAccount: Assets:Zuo:AliPay:Wallet
 
+    # - type: 收入 
+    #   item: 收钱码收款
+    #   status: "交易关闭"  #为什么针对交易关闭才忽略的规则对所有交易都生效了
+    #   ignore: true
+
     - category: 日用百货
       targetAccount: Expenses:Misc
+
     - category: 日用百货
       peer: 沃尔玛
       targetAccount: Expenses:Food:Groceries
+      
+    - category: 日用百货
+      item: ALDI奥乐齐超市(东方路店)
+      targetAccount: Expenses:Food:Groceries
+
     - category: 餐饮美食
       item: 外卖
       targetAccount: Expenses:Food:Takeout
+
+    - category: 餐饮美食
+      item: 收钱码收款
+      targetAccount: Expenses:Food:FruitSnacks
 
     - category: 生活服务
       type: 支出
       item: 寄件费
       targetAccount: Expenses:Comm:Express
+
     - category: 商业服务
       type: 支出
-      item: 基础软件服务费
+      item: 基础软件服务费,Office365
       targetAccount: Expenses:Education:Software
+
+    - category: 数码电器
+      targetAccount: Expenses:Home:Appliances
+
     - category: 交通出行
       targetAccount: Expenses:Transport:Taxi
+
     - category: 文化休闲
       targetAccount: Expenses:Leisure:Entertainment
+
     - category: 运动户外
       targetAccount: Expenses:Leisure:Sports
+
+    - category: 充值缴费
+      peer: 中国电信
+      targetAccount: Expenses:Comm:Internet
+
+    - category: 充值缴费
+      peer: 上海移动
+      targetAccount: Expenses:Comm:PhonePlan
+
+    - category: 保险
+      merchantId: CPC
+      targetAccount: Expenses:Insurance:Property
+
     - category: 保险
       item: 好医保
       targetAccount: Expenses:Insurance:Health:Medical
 
     - peer: 上海燃气有限公司
       targetAccount: Expenses:Home:Utilities:Gas
-    - peer: 国网上海市电力公司(缴费)
+
+    - peer: 国网上海市电力公司(缴费),供电局
       targetAccount: Expenses:Home:Utilities:Electricity
+
     - peer: 上海浦东威立雅自来水有限公司
       targetAccount: Expenses:Home:Utilities:Water
+
     - peer: 滴露
       targetAccount: Expenses:Groceries
+
     - peer: 苏宁
       targetAccount: Expenses:Electronics
+
     - peer: 星巴克
       targetAccount: Expenses:Food:Drinks
+
     - item: 相互宝
       targetAccount: Expenses:Insurance
 
     - method: 余额
       fullMatch: true
       methodAccount: Assets:Alipay
+
     - method: 余额宝
       fullMatch: true
       methodAccount: Assets:Zuo:AliPay:Saving
+
     - method: 浦发银行信用卡(1765)
       fullMatch: true
       methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
@@ -104,8 +147,4 @@ alipay:
       methodAccount: Assets:Alipay:Invest:Fund
       targetAccount: Assets:Alipay
       pnlAccount: Income:Alipay:Invest:PnL
-
-    - category: 收入 
-      status: 交易关闭 # 交易关闭忽略
-      ignore: true
 
