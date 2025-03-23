@@ -42,6 +42,10 @@ alipay:
       item: 收钱码收款
       targetAccount: Expenses:Food:FruitSnacks
 
+    - category: 餐饮美食
+      item: 食用油
+      targetAccount: Expenses:Food:Groceries
+
     - category: 生活服务
       type: 支出
       item: 寄件费
@@ -57,6 +61,10 @@ alipay:
 
     - category: 交通出行
       targetAccount: Expenses:Transport:Taxi
+
+    - category: 交通出行
+      item: 单车
+      targetAccount: Expenses:Transport:Bicycle
 
     - category: 文化休闲
       targetAccount: Expenses:Leisure:Entertainment
@@ -77,7 +85,7 @@ alipay:
       targetAccount: Expenses:Insurance:Property
 
     - category: 保险
-      item: 好医保
+      item: 好医保,惠琼保
       targetAccount: Expenses:Insurance:Health:Medical
 
     - category: 亲友代付
@@ -109,6 +117,9 @@ alipay:
 
     - item: 相互宝
       targetAccount: Expenses:Insurance
+
+    - item: 药品
+      targetAccount: Expenses:Health:Drugs
 
     - method: 余额
       fullMatch: true
