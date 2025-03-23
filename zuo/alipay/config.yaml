@@ -180,10 +180,10 @@ alipay:
 
     - category: 退款
       method: 余额宝
-      targetAccount: Assets:Zuo:AliPay:Saving
-      methodAccount: Income:FIXME
+      methodAccount: Assets:Zuo:AliPay:Saving
+      targetAccount: Expenses:FIXME
 
     - category: 退款
       method: 支付宝
-      targetAccount: Assets:Zuo:AliPay:Wallet
-      methodAccount: Income:FIXME
+      methodAccount: Assets:Zuo:AliPay:Wallet
+      targetAccount: Expenses:FIXME
