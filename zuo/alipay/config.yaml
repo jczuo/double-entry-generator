@@ -38,6 +38,10 @@ alipay:
       item: 外卖
       targetAccount: Expenses:Food:Takeout
 
+    - peer: 饿了么
+      item: 吃货卡
+      targetAccount: Expenses:Food:Takeout
+
     - category: 餐饮美食
       item: 收钱码收款
       targetAccount: Expenses:Food:FruitSnacks
@@ -95,7 +99,11 @@ alipay:
       item: 黄金
       targetAccount: Expenses:Clothes:Accessory
 
+    - category: 家居家装
+      targetAccount: Expenses:Home:Furniture
 
+    - category: 医疗健康
+      targetAccount: Expenses:Health:Medical
 
     - peer: 上海燃气有限公司
       targetAccount: Expenses:Home:Utilities:Gas
@@ -108,9 +116,6 @@ alipay:
 
     - peer: 滴露
       targetAccount: Expenses:Groceries
-
-    - peer: 苏宁
-      targetAccount: Expenses:Electronics
 
     - peer: 星巴克
       targetAccount: Expenses:Food:Drinks
