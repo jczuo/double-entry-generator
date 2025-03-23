@@ -24,12 +24,15 @@ alipay:
       targetAccount: Expenses:Misc
 
     - category: 日用百货
-      peer: 沃尔玛
+      peer: 沃尔玛,盒马
       targetAccount: Expenses:Food:Groceries
       
     - category: 日用百货
       item: ALDI奥乐齐超市(东方路店)
       targetAccount: Expenses:Food:Groceries
+
+    - category: 餐饮美食
+      targetAccount: Expenses:Food:DinningOut
 
     - category: 餐饮美食
       item: 外卖
@@ -76,6 +79,15 @@ alipay:
     - category: 保险
       item: 好医保
       targetAccount: Expenses:Insurance:Health:Medical
+
+    - category: 亲友代付
+      targetAccount: Expenses:ParentsDaily
+
+    - category: 服饰装扮
+      item: 黄金
+      targetAccount: Expenses:Clothes:Accessory
+
+
 
     - peer: 上海燃气有限公司
       targetAccount: Expenses:Home:Utilities:Gas
@@ -148,3 +160,12 @@ alipay:
       targetAccount: Assets:Alipay
       pnlAccount: Income:Alipay:Invest:PnL
 
+    - category: 退款
+      method: 余额宝
+      targetAccount: Assets:Zuo:AliPay:Saving
+      methodAccount: Income:FIXME
+
+    - category: 退款
+      method: 支付宝
+      targetAccount: Assets:Zuo:AliPay:Wallet
+      methodAccount: Income:FIXME
