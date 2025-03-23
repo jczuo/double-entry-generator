@@ -119,8 +119,10 @@ alipay:
       methodAccount: Assets:Zuo:AliPay:Saving
 
     - method: 浦发银行信用卡(1765)
-      fullMatch: true
       methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
+
+    - method: 招商银行储蓄卡(9332)
+      methodAccount: Assets:Zuo:Savings:CMB:0225
 
     # 交易类型为其他
     - type: 不计收支 #余额宝收入
