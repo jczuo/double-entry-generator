@@ -178,12 +178,15 @@ alipay:
       targetAccount: Assets:Alipay
       pnlAccount: Income:Alipay:Invest:PnL
 
-    - category: 退款
-      method: 余额宝
-      methodAccount: Assets:Zuo:AliPay:Saving
-      targetAccount: Expenses:FIXME
 
     - category: 退款
       method: 支付宝
-      methodAccount: Assets:Zuo:AliPay:Wallet
-      targetAccount: Expenses:FIXME
+      type: 不计收支
+      methodAccount: Expenses:FIXME
+      targetAccount: Assets:Zuo:AliPay:Wallet
+
+    - category: 退款
+      method: 余额宝
+      type: 不计收支
+      methodAccount: Expenses:FIXME
+      targetAccount: Assets:Zuo:AliPay:Saving
