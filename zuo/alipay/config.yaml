@@ -47,6 +47,19 @@ alipay:
       targetAccount: Expenses:Food:FruitSnacks
 
     - category: 餐饮美食
+      item: 零售
+      targetAccount: Expenses:Food:FruitSnacks
+
+    - category: 餐饮美食
+      peer: 零售
+      targetAccount: Expenses:Food:FruitSnacks
+
+    - category: 餐饮美食
+      peer: 沙县, 饭
+      item: 收钱码收款
+      targetAccount: Expenses:Food:DinningOut
+
+    - category: 餐饮美食
       item: 食用油
       targetAccount: Expenses:Food:Groceries
 
@@ -60,6 +73,15 @@ alipay:
       item: 基础软件服务费,Office365
       targetAccount: Expenses:Education:Software
 
+    - category: 公共服务
+      peer: 税务
+      targetAccount: Expenses:Finance:Taxes
+
+    - category: 日用百货
+      type: 支出
+      item: 88VIP
+      targetAccount: Expenses:Education:Software
+
     - category: 数码电器
       targetAccount: Expenses:Home:Appliances
 
@@ -69,6 +91,12 @@ alipay:
     - category: 交通出行
       item: 单车
       targetAccount: Expenses:Transport:Bicycle
+
+    - peer: 停车
+      targetAccount: Expenses:Transport:Parking
+
+    - peer: 代驾
+      targetAccount: Expenses:Transport:Car:Chauffeur
 
     - category: 文化休闲
       targetAccount: Expenses:Leisure:Entertainment
@@ -125,6 +153,10 @@ alipay:
 
     - item: 药品
       targetAccount: Expenses:Health:Drugs
+  
+    - item: 打印,手工 
+      targetAccount: Expenses:Leisure:Crafting
+
 
     - method: 余额
       fullMatch: true
@@ -139,6 +171,9 @@ alipay:
 
     - method: 招商银行储蓄卡(9332)
       methodAccount: Assets:Zuo:Savings:CMB:0225
+
+    - method: 农业银行储蓄卡(7911)
+      methodAccount: Assets:Zuo:Savings:ABC:7911
 
     # 交易类型为其他
     - type: 不计收支 #余额宝收入
