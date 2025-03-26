@@ -73,6 +73,10 @@ alipay:
       item: 基础软件服务费,Office365
       targetAccount: Expenses:Education:Software
 
+    - type: 支出
+      peer: 微软
+      targetAccount: Expenses:Education:Software
+
     - category: 公共服务
       peer: 税务
       targetAccount: Expenses:Finance:Taxes
@@ -154,7 +158,7 @@ alipay:
     - item: 药品
       targetAccount: Expenses:Health:Drugs
   
-    - item: 打印,手工 
+    - item: 打印,手工,加工
       targetAccount: Expenses:Leisure:Crafting
 
 
