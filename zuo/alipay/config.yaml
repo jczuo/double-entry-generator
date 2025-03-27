@@ -120,6 +120,9 @@ alipay:
       merchantId: CPC
       targetAccount: Expenses:Insurance:Property
 
+    - category: 医疗健康
+      targetAccount: Expenses:Health:Medical
+
     - category: 保险
       item: 好医保,惠琼保
       targetAccount: Expenses:Insurance:Health:Medical
@@ -133,9 +136,6 @@ alipay:
 
     - category: 家居家装
       targetAccount: Expenses:Home:Furniture
-
-    - category: 医疗健康
-      targetAccount: Expenses:Health:Medical
 
     - peer: 上海燃气有限公司
       targetAccount: Expenses:Home:Utilities:Gas
@@ -158,6 +158,9 @@ alipay:
     - item: 药品
       targetAccount: Expenses:Health:Drugs
   
+    - peer: 叮当快药
+      targetAccount: Expenses:Health:Drugs
+
     - item: 打印,手工,加工
       targetAccount: Expenses:Leisure:Crafting
 
@@ -167,7 +170,6 @@ alipay:
       methodAccount: Assets:Alipay
 
     - method: 余额宝
-      fullMatch: true
       methodAccount: Assets:Zuo:AliPay:Saving
 
     - method: 浦发银行信用卡(1765)
