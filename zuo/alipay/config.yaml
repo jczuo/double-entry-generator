@@ -20,7 +20,7 @@ alipay:
     #   status: "交易关闭"  #为什么针对交易关闭才忽略的规则对所有交易都生效了
     #   ignore: true
 
-    - category: 日用百货
+    - category: 日用百货,信用借还
       targetAccount: Expenses:Misc
 
     - category: 日用百货
@@ -47,7 +47,7 @@ alipay:
       targetAccount: Expenses:Food:FruitSnacks
 
     - category: 餐饮美食
-      item: 零售
+      item: 零售,货柜
       targetAccount: Expenses:Food:FruitSnacks
 
     - category: 餐饮美食
@@ -68,8 +68,7 @@ alipay:
       item: 寄件费
       targetAccount: Expenses:Comm:Express
 
-    - category: 商业服务
-      type: 支出
+    - type: 支出
       item: 基础软件服务费,Office365
       targetAccount: Expenses:Education:Software
 
@@ -93,10 +92,17 @@ alipay:
       targetAccount: Expenses:Transport:Taxi
 
     - category: 交通出行
-      item: 单车
+      item: 汽车票,地铁
+      targetAccount: Expenses:Transport:Public
+
+    - category: 交通出行
+      item: 单车,自行车
       targetAccount: Expenses:Transport:Bicycle
 
     - peer: 停车
+      targetAccount: Expenses:Transport:Parking
+
+    - item: 停车
       targetAccount: Expenses:Transport:Parking
 
     - peer: 代驾
@@ -105,11 +111,22 @@ alipay:
     - category: 文化休闲
       targetAccount: Expenses:Leisure:Entertainment
 
+    - category: 文化休闲
+      item: 书籍
+      targetAccount: Expenses:Leisure:Books
+
+    - category: 文化休闲
+      item: 玩具
+      targetAccount: Expenses:Leisure:Toys
+
     - category: 运动户外
       targetAccount: Expenses:Leisure:Sports
 
     - category: 充值缴费
       peer: 中国电信
+      targetAccount: Expenses:Comm:Internet
+
+    - item: justmysocks
       targetAccount: Expenses:Comm:Internet
 
     - category: 充值缴费
@@ -131,11 +148,14 @@ alipay:
       targetAccount: Expenses:ParentsDaily
 
     - category: 服饰装扮
-      item: 黄金
+      item: 黄金,周大福
       targetAccount: Expenses:Clothes:Accessory
 
     - category: 家居家装
       targetAccount: Expenses:Home:Furniture
+
+    - category: 住房物业
+      targetAccount: Expenses:Home:PropertyFee
 
     - peer: 上海燃气有限公司
       targetAccount: Expenses:Home:Utilities:Gas
@@ -143,7 +163,7 @@ alipay:
     - peer: 国网上海市电力公司(缴费),供电局
       targetAccount: Expenses:Home:Utilities:Electricity
 
-    - peer: 上海浦东威立雅自来水有限公司
+    - peer: 上海浦东威立雅自来水有限公司,南汇自来水
       targetAccount: Expenses:Home:Utilities:Water
 
     - peer: 滴露
@@ -161,9 +181,11 @@ alipay:
     - peer: 叮当快药
       targetAccount: Expenses:Health:Drugs
 
-    - item: 打印,手工,加工
+    - item: 打印,手工,加工,拼图
       targetAccount: Expenses:Leisure:Crafting
 
+    - item: 相框
+      targetAccount: Expenses:Home:Furniture
 
     - method: 余额
       fullMatch: true
