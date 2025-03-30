@@ -43,7 +43,7 @@ alipay:
 
     - peer: 饿了么
       item: 吃货卡
-      targetAccount: Expenses:Subscriptions:Shopping:eLeMe
+      targetAccount: Expenses:Subscriptions:Shopping:ELeMe
 
     - category: 餐饮美食
       item: 收钱码收款
@@ -145,7 +145,7 @@ alipay:
       targetAccount: Expenses:Subscriptions:Software:Office365
 
     - peer: 爱奇艺
-      targetAccount: Expenses:Subscriptions:Video:iQiYi
+      targetAccount: Expenses:Subscriptions:Video:IQiYi
 
     - peer: 芒果TV
       targetAccount: Expenses:Subscriptions:Video:MGTV
