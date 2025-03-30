@@ -24,23 +24,26 @@ alipay:
       targetAccount: Expenses:Misc
 
     - category: 日用百货
-      peer: 沃尔玛,盒马
+      peer: 沃尔玛,盒马,山姆会员商店
       targetAccount: Expenses:Food:Groceries
       
     - category: 日用百货
       item: ALDI奥乐齐超市(东方路店)
       targetAccount: Expenses:Food:Groceries
 
+    - category: 日用百货
+      peer: 饿了么
+      targetAccount: Expenses:Food:Groceries
+      
     - category: 餐饮美食
       targetAccount: Expenses:Food:DinningOut
 
-    - category: 餐饮美食
-      item: 外卖
+    - item: 外卖
       targetAccount: Expenses:Food:Takeout
 
     - peer: 饿了么
       item: 吃货卡
-      targetAccount: Expenses:Food:Takeout
+      targetAccount: Expenses:Subscriptions:Shopping:eLeMe
 
     - category: 餐饮美食
       item: 收钱码收款
@@ -50,8 +53,8 @@ alipay:
       item: 零售,货柜
       targetAccount: Expenses:Food:FruitSnacks
 
-    - category: 餐饮美食
-      peer: 零售
+    - category: 餐饮美食,日用百货
+      peer: 零售,售货
       targetAccount: Expenses:Food:FruitSnacks
 
     - category: 餐饮美食
@@ -67,14 +70,6 @@ alipay:
       type: 支出
       item: 寄件费
       targetAccount: Expenses:Comm:Express
-
-    - type: 支出
-      item: 基础软件服务费,Office365
-      targetAccount: Expenses:Education:Software
-
-    - type: 支出
-      peer: 微软
-      targetAccount: Expenses:Education:Software
 
     - category: 公共服务
       peer: 税务
@@ -92,18 +87,26 @@ alipay:
       targetAccount: Expenses:Transport:Taxi
 
     - category: 交通出行
-      item: 汽车票,地铁
+      item: 汽车票,地铁,火车票
       targetAccount: Expenses:Transport:Public
 
     - category: 交通出行
       item: 单车,自行车
       targetAccount: Expenses:Transport:Bicycle
 
+
+    - category: 爱车养车
+      targetAccount: Expenses:Transport:Car
+
     - peer: 停车
-      targetAccount: Expenses:Transport:Parking
+      targetAccount: Expenses:Transport:Car:Parking
 
     - item: 停车
-      targetAccount: Expenses:Transport:Parking
+      targetAccount: Expenses:Transport:Car:Parking
+
+    - category: 爱车养车
+      item: 保养
+      targetAccount: Expenses:Transport:Car:Maintenance
 
     - peer: 代驾
       targetAccount: Expenses:Transport:Car:Chauffeur
@@ -121,6 +124,35 @@ alipay:
 
     - category: 运动户外
       targetAccount: Expenses:Leisure:Sports
+
+    - category: 教育培训
+      peer: 教育
+      targetAccount: Expenses:Education:Training
+
+    - type: 支出
+      item: 基础软件服务费,Office365
+      targetAccount: Expenses:Education:Software
+
+    - type: 支出
+      peer: 微软
+      targetAccount: Expenses:Education:Software
+  
+    - category: 充值缴费
+      item: 88VIP
+      targetAccount: Expenses:Subscriptions:Shopping:88VIP
+
+    - item: Office365,365office
+      targetAccount: Expenses:Subscriptions:Software:Office365
+
+    - peer: 爱奇艺
+      targetAccount: Expenses:Subscriptions:Video:iQiYi
+
+    - peer: 芒果TV
+      targetAccount: Expenses:Subscriptions:Video:MGTV
+
+    - item: 试卷宝
+      targetAccount: Expenses:Subscriptions:Study:ShiJuanBao
+
 
     - category: 充值缴费
       peer: 中国电信
@@ -140,7 +172,7 @@ alipay:
     - category: 医疗健康
       targetAccount: Expenses:Health:Medical
 
-    - category: 保险
+    - category: 保险,其他
       item: 好医保,惠琼保
       targetAccount: Expenses:Insurance:Health:Medical
 
@@ -148,8 +180,9 @@ alipay:
       targetAccount: Expenses:ParentsDaily
 
     - category: 服饰装扮
-      item: 黄金,周大福
+      item: 黄金,周大福,项链
       targetAccount: Expenses:Clothes:Accessory
+
 
     - category: 家居家装
       targetAccount: Expenses:Home:Furniture
@@ -181,7 +214,7 @@ alipay:
     - peer: 叮当快药
       targetAccount: Expenses:Health:Drugs
 
-    - item: 打印,手工,加工,拼图
+    - item: 打印,手工,加工,拼图,diy,DIY
       targetAccount: Expenses:Leisure:Crafting
 
     - item: 相框
