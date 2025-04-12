@@ -1,4 +1,4 @@
-defaultMinusAccount: Assets:FIXME
+defaultMinusAccount: Assets:Zuo:WeChat:Wallet
 defaultPlusAccount: Expenses:FIXME
 defaultCommissionAccount: Expenses:Commission:FIXME
 defaultCurrency: CNY
@@ -14,20 +14,24 @@ wechat:
       txType: 转入零钱
       peer: /
       item: /
-      targetAccount: Assets:Digital:Wechat:Cash
+      targetAccount: Assets:Zuo:WeChat:Wallet
     - type: / # 零钱提现
       txType: 零钱提现
-      targetAccount: Assets:Digital:Wechat:Cash
+      targetAccount: Assets:Zuo:WeChat:Wallet
       commissionAccount: Expenses:Wechat:Commission
     - type: / # 零钱充值
       txType: 零钱充值
-      targetAccount: Assets:Digital:Wechat:Cash
+      targetAccount: Assets:Zuo:WeChat:Wallet
     - type: / # 零钱通转出-到工商银行(9876)
       txType: 零钱通转出-到工商银行(9876)
       targetAccount: Assets:Bank:CN:ICBC:Savings
     - type: 支出
       txType: 赞赏码
       targetAccount: Expenses:Wechat:Sponsor
+
+    - peer: 塘桥美好生活馆
+      type: 支出
+      targetAccount: Expenses:Food:DinningOut
 
     - peer: 云膳过桥米线,餐厅
       sep: ","
@@ -58,6 +62,10 @@ wechat:
       type: 支出
       targetAccount: Expenses:Housing:Rent
 
+    - item: 停车
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Parking
+
     - peer: 用户
       type: 收入
       targetAccount: Income:Service
@@ -72,15 +80,15 @@ wechat:
       targetAccount: Liabilities:Bank:CN:CCB
 
     - method: / # 一般为收入，存入零钱
-      methodAccount: Assets:Digital:Wechat:Cash
+      methodAccount: Assets:Zuo:WeChat:Wallet
     - method: 零钱
       fullMatch: true
-      methodAccount: Assets:Digital:Wechat:Cash
+      methodAccount: Assets:Zuo:WeChat:Wallet
     - method: 零钱通
       fullMatch: true
-      methodAccount: Assets:Digital:Wechat:Cash
-    - method: 工商银行
-      methodAccount: Assets:Bank:CN:ICBC:Savings
+      methodAccount: Assets:Zuo:WeChat:Wallet
+    - method: 浦发银行信用卡(1765)
+      methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
     - method: 中国银行
       methodAccount: Assets:Bank:CN:BOC:Savings
 
