@@ -29,6 +29,78 @@ wechat:
       txType: 赞赏码
       targetAccount: Expenses:Wechat:Sponsor
 
+    # 从支付宝导入的规则
+    - peer: 沃尔玛,盒马,山姆会员商店
+      targetAccount: Expenses:Food:Groceries
+      
+    - peer: 饿了么
+      targetAccount: Expenses:Food:Groceries
+      
+    - peer: 沙县, 饭
+      targetAccount: Expenses:Food:DinningOut
+
+    - item: 寄件费
+      targetAccount: Expenses:Comm:Express
+
+    - peer: 税务
+      targetAccount: Expenses:Finance:Taxes
+
+    - item: 88VIP
+      targetAccount: Expenses:Education:Software
+
+    - peer: 微软
+      targetAccount: Expenses:Education:Software
+  
+    - item: Office365,365office
+      targetAccount: Expenses:Subscriptions:Software:Office365
+
+    - peer: 爱奇艺
+      targetAccount: Expenses:Subscriptions:Video:IQiYi
+
+    - peer: 芒果TV
+      targetAccount: Expenses:Subscriptions:Video:MGTV
+
+    - item: 试卷宝
+      targetAccount: Expenses:Subscriptions:Study:ShiJuanBao
+
+    - peer: 中国电信
+      targetAccount: Expenses:Comm:Internet
+
+    - item: justmysocks
+      targetAccount: Expenses:Comm:Internet
+
+    - peer: 上海移动
+      targetAccount: Expenses:Comm:PhonePlan
+
+    - peer: 上海燃气有限公司
+      targetAccount: Expenses:Home:Utilities:Gas
+
+    - peer: 国网上海市电力公司(缴费),供电局
+      targetAccount: Expenses:Home:Utilities:Electricity
+
+    - peer: 上海浦东威立雅自来水有限公司,南汇自来水
+      targetAccount: Expenses:Home:Utilities:Water
+
+
+    - peer: 星巴克,M Stand
+      targetAccount: Expenses:Food:Drinks
+
+    - item: 相互宝
+      targetAccount: Expenses:Insurance
+
+    - item: 药品
+      targetAccount: Expenses:Health:Drugs
+  
+    - peer: 叮当快药
+      targetAccount: Expenses:Health:Drugs
+
+    - item: 打印,手工,加工,拼图,diy,DIY
+      targetAccount: Expenses:Leisure:Crafting
+
+    - item: 相框
+      targetAccount: Expenses:Home:Furniture
+
+    # 原有的微信特定规则
     - peer: 塘桥美好生活馆
       type: 支出
       targetAccount: Expenses:Food:DinningOut
@@ -89,9 +161,14 @@ wechat:
       methodAccount: Assets:Zuo:WeChat:Wallet
     - method: 浦发银行信用卡(1765)
       methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
-    - method: 中国银行
-      methodAccount: Assets:Bank:CN:BOC:Savings
+    - method: 招商银行信用卡(7102)
+      methodAccount: Liabilities:Zuo:CreditCard:CMB:7102
+    - method: 招商银行储蓄卡(0225)
+      methodAccount: Assets:Zuo:Savings:CMB:0225
 
     - peer: 测试时间戳
       timestamp_range: 1658112487-1658112490 # order_time= 2022-07-18 10:48:09 ts=1658112489
       targetAccount: Expenses:Travel
+
+    - item: 亲属卡
+      targetAccount: Expenses:ParentsDaily
