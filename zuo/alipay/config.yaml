@@ -147,6 +147,9 @@ alipay:
     - peer: 爱奇艺
       targetAccount: Expenses:Subscriptions:Video:IQiYi
 
+    - peer: 云视听极光
+      targetAccount: Expenses:Subscriptions:Video:QQVideo
+
     - peer: 芒果TV
       targetAccount: Expenses:Subscriptions:Video:MGTV
 
