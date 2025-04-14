@@ -1,16 +1,16 @@
-defaultMinusAccount: Assets:Zuo:WeChat:Wallet
+defaultMinusAccount: Income:Zuo:WeChat:RedPacket
 defaultPlusAccount: Expenses:FIXME
 defaultCommissionAccount: Expenses:Commission:FIXME
 defaultCurrency: CNY
-title: 测试
+title: 微信交易记录
 wechat:
   rules:
-    # type (additional condition)
+    # 基础交易类型规则
     - type: 收入 # 微信红包
       method: /
       item: /
-      targetAccount: Income:Wechat:RedPacket
-    - type: / # 转入零钱通
+      targetAccount: Income:Zuo:WeChat:RedPacket
+    - type: / # 转入零钱
       txType: 转入零钱
       peer: /
       item: /
@@ -24,19 +24,26 @@ wechat:
       targetAccount: Assets:Zuo:WeChat:Wallet
     - type: / # 零钱通转出-到工商银行(9876)
       txType: 零钱通转出-到工商银行(9876)
-      targetAccount: Assets:Bank:CN:ICBC:Savings
+      targetAccount: Assets:Zuo:Bank:ICBC:Savings
     - type: 支出
       txType: 赞赏码
       targetAccount: Expenses:Wechat:Sponsor
 
-    # 从支付宝导入的规则
-    - peer: 沃尔玛,盒马,山姆会员商店
+    # 日常消费分类
+
+    - item: 饮料
+      targetAccount: Expenses:Food:Drinks
+    
+    - peer: 沃尔玛,盒马,山姆会员商店,便利
       targetAccount: Expenses:Food:Groceries
       
     - peer: 饿了么
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 沙县, 饭
+    - peer: 沙县,饭,餐厅,老乡鸡,炊烟
+      targetAccount: Expenses:Food:DinningOut
+
+    - item: 点餐订单
       targetAccount: Expenses:Food:DinningOut
 
     - item: 寄件费
@@ -45,17 +52,25 @@ wechat:
     - peer: 税务
       targetAccount: Expenses:Finance:Taxes
 
-    - item: 88VIP
-      targetAccount: Expenses:Education:Software
+    - peer: 中铁网络
+      targetAccount: Expenses:Transport:Public
 
+    # 订阅服务
+    - item: 88VIP
+      targetAccount: Expenses:Subscriptions:Shopping:88VIP
+      
     - peer: 微软
       targetAccount: Expenses:Education:Software
-  
+
     - item: Office365,365office
       targetAccount: Expenses:Subscriptions:Software:Office365
 
     - peer: 爱奇艺
       targetAccount: Expenses:Subscriptions:Video:IQiYi
+
+    - peer: 云视听极光
+      targetAccount: Expenses:Subscriptions:Video:QQVideo
+
 
     - peer: 芒果TV
       targetAccount: Expenses:Subscriptions:Video:MGTV
@@ -63,6 +78,7 @@ wechat:
     - item: 试卷宝
       targetAccount: Expenses:Subscriptions:Study:ShiJuanBao
 
+    # 生活缴费
     - peer: 中国电信
       targetAccount: Expenses:Comm:Internet
 
@@ -81,10 +97,17 @@ wechat:
     - peer: 上海浦东威立雅自来水有限公司,南汇自来水
       targetAccount: Expenses:Home:Utilities:Water
 
-
-    - peer: 星巴克,M Stand
+    - peer: 星巴克,M Stand,cafe
       targetAccount: Expenses:Food:Drinks
 
+    # 居家服务
+    - peer: 万物云空间,郭莉莉
+      targetAccount: Expenses:Home:PropertyFee
+
+    - peer: 万师傅
+      targetAccount: Expenses:Home:Furniture
+
+    # 健康保险
     - item: 相互宝
       targetAccount: Expenses:Insurance
 
@@ -94,32 +117,36 @@ wechat:
     - peer: 叮当快药
       targetAccount: Expenses:Health:Drugs
 
+    - peer: 素问中医,仁济医院
+      targetAccount: Expenses:Health:Medical
+
+    - peer: Lucy
+      type: 支出
+      txType: 群收款
+      targetAccount: Expenses:Leisure:Sports
+
+    - peer: 趣运动,羽神
+      type: 支出
+      targetAccount: Expenses:Leisure:Sports
+
+    # 兴趣爱好
     - item: 打印,手工,加工,拼图,diy,DIY
       targetAccount: Expenses:Leisure:Crafting
 
     - item: 相框
       targetAccount: Expenses:Home:Furniture
 
+    - peer: 美团
+      item: 骑
+      targetAccount: Expenses:Transport:Bicycle
+
     # 原有的微信特定规则
     - peer: 塘桥美好生活馆
       type: 支出
       targetAccount: Expenses:Food:DinningOut
 
-    - peer: 云膳过桥米线,餐厅
-      sep: ","
-      time: 11:00-15:00
-      targetAccount: Expenses:Food:Meal:Lunch
-    - peer: 云膳过桥米线,餐厅
-      sep: ","
-      time: 16:30-21:30
-      targetAccount: Expenses:Food:Meal:Dinner
-    - peer: 餐厅
-      time: 23:55-00:10 # test T+1
-      targetAccount: Expenses:Food:Meal:MidNight
-    - peer: 餐厅
-      time: 23:50-00:05 # test T-1
-      targetAccount: Expenses:Food:Meal:MidNight
 
+    # 美团消费规则
     - peer: 美团平台商户
       type: 支出
       minPrice: 0
@@ -130,6 +157,7 @@ wechat:
       minPrice: 10
       targetAccount: Expenses:Food:Meal
 
+    # 固定支出
     - peer: 房东
       type: 支出
       targetAccount: Expenses:Housing:Rent
@@ -137,20 +165,26 @@ wechat:
     - item: 停车
       type: 支出
       targetAccount: Expenses:Transport:Car:Parking
-
+    - peer: 停车
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Parking
+    # 收入相关
     - peer: 用户
       type: 收入
       targetAccount: Income:Service
       tag: income,service
 
+    # 投资理财
     - peer: 理财通
       type: /
       targetAccount: Assets:Trade:Tencent:LiCaiTong
 
+    # 信用卡还款
     - peer: 建设银行
       txType: 信用卡还款
       targetAccount: Liabilities:Bank:CN:CCB
 
+    # 支付方式账户
     - method: / # 一般为收入，存入零钱
       methodAccount: Assets:Zuo:WeChat:Wallet
     - method: 零钱
@@ -166,9 +200,13 @@ wechat:
     - method: 招商银行储蓄卡(0225)
       methodAccount: Assets:Zuo:Savings:CMB:0225
 
+    # 测试规则
     - peer: 测试时间戳
       timestamp_range: 1658112487-1658112490 # order_time= 2022-07-18 10:48:09 ts=1658112489
       targetAccount: Expenses:Travel
 
+    # 家庭支出
     - item: 亲属卡
       targetAccount: Expenses:ParentsDaily
+
+    
