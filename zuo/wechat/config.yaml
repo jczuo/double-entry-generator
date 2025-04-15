@@ -34,7 +34,7 @@ wechat:
     - item: 饮料
       targetAccount: Expenses:Food:Drinks
     
-    - peer: 沃尔玛,盒马,山姆会员商店,便利
+    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多
       targetAccount: Expenses:Food:Groceries
       
     - peer: 饿了么
