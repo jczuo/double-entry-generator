@@ -97,7 +97,7 @@ wechat:
     - peer: 上海浦东威立雅自来水有限公司,南汇自来水
       targetAccount: Expenses:Home:Utilities:Water
 
-    - peer: 星巴克,M Stand,cafe
+    - peer: 星巴克,M Stand,cafe,COSTA
       targetAccount: Expenses:Food:Drinks
 
     # 居家服务
