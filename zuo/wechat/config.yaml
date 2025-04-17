@@ -31,16 +31,19 @@ wechat:
 
     # 日常消费分类
 
-    - item: 饮料
+    - item: 饮料,脉动,咖啡,奶茶,咖啡馆
+      targetAccount: Expenses:Food:Drinks
+  
+    - peer: 挥拍羽毛球,Manner,咖啡馆,球馆
       targetAccount: Expenses:Food:Drinks
     
-    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多
+    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生
       targetAccount: Expenses:Food:Groceries
       
     - peer: 饿了么
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 沙县,饭,餐厅,老乡鸡,炊烟
+    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝
       targetAccount: Expenses:Food:DinningOut
 
     - item: 点餐订单
@@ -140,10 +143,16 @@ wechat:
       item: 骑
       targetAccount: Expenses:Transport:Bicycle
 
+    - item: 交通罚没
+      targetAccount: Expenses:Transport:Car:Fines
+
     # 原有的微信特定规则
     - peer: 塘桥美好生活馆
       type: 支出
       targetAccount: Expenses:Food:DinningOut
+
+    - peer: 尧力
+      targetAccount: Expenses:Education:Training
 
 
     # 美团消费规则
@@ -209,4 +218,5 @@ wechat:
     - item: 亲属卡
       targetAccount: Expenses:ParentsDaily
 
-    
+    - item: 充电宝
+      targetAccount: Expenses:ParentsDaily
