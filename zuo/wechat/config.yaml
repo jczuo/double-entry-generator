@@ -29,24 +29,31 @@ wechat:
       txType: 赞赏码
       targetAccount: Expenses:Wechat:Sponsor
 
+    - type: 支出
+      txType: 微信红包
+      targetAccount: Expenses:Wechat:RedPacket
+
+    - type: 收入
+      txType: 微信红包-退款
+      targetAccount: Expenses:Wechat:RedPacket
     # 日常消费分类
 
     - item: 饮料,脉动,咖啡,奶茶,咖啡馆
       targetAccount: Expenses:Food:Drinks
   
-    - peer: 挥拍羽毛球,Manner,咖啡馆,球馆
+    - peer: 羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园
       targetAccount: Expenses:Food:Drinks
     
-    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生
+    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚
       targetAccount: Expenses:Food:Groceries
       
     - peer: 饿了么
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝
+    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客
       targetAccount: Expenses:Food:DinningOut
 
-    - item: 点餐订单
+    - item: 点餐订单,餐饮
       targetAccount: Expenses:Food:DinningOut
 
     - item: 寄件费
@@ -55,7 +62,7 @@ wechat:
     - peer: 税务
       targetAccount: Expenses:Finance:Taxes
 
-    - peer: 中铁网络
+    - peer: 中铁网络,上海铁路局,上铁
       targetAccount: Expenses:Transport:Public
 
     # 订阅服务
@@ -107,7 +114,7 @@ wechat:
     - peer: 万物云空间,郭莉莉
       targetAccount: Expenses:Home:PropertyFee
 
-    - peer: 万师傅
+    - peer: 万师傅,宜家
       targetAccount: Expenses:Home:Furniture
 
     # 健康保险
@@ -120,15 +127,20 @@ wechat:
     - peer: 叮当快药
       targetAccount: Expenses:Health:Drugs
 
-    - peer: 素问中医,仁济医院
+    - peer: 素问中医,仁济医院,社区卫生
       targetAccount: Expenses:Health:Medical
 
-    - peer: Lucy
+    - peer: Lucy,Irvin,张立
       type: 支出
       txType: 群收款
       targetAccount: Expenses:Leisure:Sports
 
-    - peer: 趣运动,羽神
+    - peer: Lucy,Irvin,张立,羊马菜
+      type: 收入
+      txType: 群收款
+      targetAccount: Expenses:Leisure:Sports
+
+    - peer: 趣运动,西可球类中心,西可体育
       type: 支出
       targetAccount: Expenses:Leisure:Sports
 
@@ -171,12 +183,27 @@ wechat:
       type: 支出
       targetAccount: Expenses:Housing:Rent
 
-    - item: 停车
+
+    - peer: 停车,平安喜乐
       type: 支出
       targetAccount: Expenses:Transport:Car:Parking
-    - peer: 停车
+
+    - item: 停车,17856
       type: 支出
       targetAccount: Expenses:Transport:Car:Parking
+
+    - peer: 特来电
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Charging
+
+    - peer: 石油
+      type: 支出
+      targetAccount: Expenses:Transport:Gas
+
+    - peer: 滴滴
+      type: 支出
+      targetAccount: Expenses:Transport:Taxi
+
     # 收入相关
     - peer: 用户
       type: 收入
@@ -218,5 +245,8 @@ wechat:
     - item: 亲属卡
       targetAccount: Expenses:ParentsDaily
 
-    - item: 充电宝
+    - txType: 亲属卡交易-退款
       targetAccount: Expenses:ParentsDaily
+
+    - item: 充电宝
+      targetAccount: Expenses:Services:Charging
