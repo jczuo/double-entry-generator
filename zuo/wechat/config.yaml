@@ -28,42 +28,85 @@ wechat:
     - type: 支出
       txType: 赞赏码
       targetAccount: Expenses:Wechat:Sponsor
-
     - type: 支出
       txType: 微信红包
       targetAccount: Expenses:Wechat:RedPacket
-
     - type: 收入
       txType: 微信红包-退款
       targetAccount: Expenses:Wechat:RedPacket
-    # 日常消费分类
 
-    - item: 饮料,脉动,咖啡,奶茶,咖啡馆
+    # 交通出行
+    - peer: 中铁网络,上海铁路局,上铁,北京轨道交通互联网票务,杭州杭港地铁有限公司
+      targetAccount: Expenses:Transport:Public
+
+    - peer: 停车,平安喜乐,上海国正中心停车场,上海希望医科停车场,INNO创智,上海城投悦城置业有限公司,长泰广场,深圳市顺易通信息科技有限公司,万物云（万科物业母公司）,互联互通停车场,上海益镇物业管理有限公司,上海联讯物业管理有限公司,尚博物业
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Parking
+
+    - item: 停车,17856
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Parking
+
+    - peer: 特来电
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Charging
+
+    - peer: 石油,中国石油
+      type: 支出
+      targetAccount: Expenses:Transport:Gas
+
+    - peer: 滴滴
+      type: 支出
+      targetAccount: Expenses:Transport:Taxi
+
+    - item: 高速收费
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Toll
+
+    - peer: 妙车坊汽车一站式服务
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Maintenance
+
+    - item: 交通罚没
+      targetAccount: Expenses:Transport:Car:Fines
+
+    # 日常消费分类
+    - peer: 羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料
       targetAccount: Expenses:Food:Drinks
-  
-    - peer: 羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园
+
+    - item: 矿泉水
       targetAccount: Expenses:Food:Drinks
-    
-    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚
+
+    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚,吉士买生鲜生活超市,上海浦东开市客商业有限公司
       targetAccount: Expenses:Food:Groceries
       
     - peer: 饿了么
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客
+    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司
+      targetAccount: Expenses:Food:DinningOut
+
+    - peer: 塘桥美好生活馆,大牌档,牛肉面,麻辣烫,馄饨,东北小馆,斑鱼府,小吃店,海棠糕,蒸糕,香港茶餐,台味本舖,羊肉馆,云南菜,拉面,煲仔皇
       targetAccount: Expenses:Food:DinningOut
 
     - item: 点餐订单,餐饮
       targetAccount: Expenses:Food:DinningOut
 
+    - peer: 邵建锋
+      targetAccount: Expenses:Food:FruitSnacks
+
+    # 快递服务
+    - peer: EMS
+      targetAccount: Expenses:Comm:Express
+
     - item: 寄件费
       targetAccount: Expenses:Comm:Express
 
-    - peer: 税务
-      targetAccount: Expenses:Finance:Taxes
+    # 个人护理
+    - peer: 宜剪
+      targetAccount: Expenses:Health:Beauty
 
-    - peer: 中铁网络,上海铁路局,上铁
-      targetAccount: Expenses:Transport:Public
+
 
     # 订阅服务
     - item: 88VIP
@@ -75,12 +118,11 @@ wechat:
     - item: Office365,365office
       targetAccount: Expenses:Subscriptions:Software:Office365
 
-    - peer: 爱奇艺
+    - peer: 爱奇艺,银河奇异果
       targetAccount: Expenses:Subscriptions:Video:IQiYi
 
     - peer: 云视听极光
       targetAccount: Expenses:Subscriptions:Video:QQVideo
-
 
     - peer: 芒果TV
       targetAccount: Expenses:Subscriptions:Video:MGTV
@@ -95,7 +137,7 @@ wechat:
     - item: justmysocks
       targetAccount: Expenses:Comm:Internet
 
-    - peer: 上海移动
+    - peer: 上海移动,中国移动
       targetAccount: Expenses:Comm:PhonePlan
 
     - peer: 上海燃气有限公司
@@ -107,19 +149,37 @@ wechat:
     - peer: 上海浦东威立雅自来水有限公司,南汇自来水
       targetAccount: Expenses:Home:Utilities:Water
 
-    - peer: 星巴克,M Stand,cafe,COSTA
-      targetAccount: Expenses:Food:Drinks
-
     # 居家服务
     - peer: 万物云空间,郭莉莉
       targetAccount: Expenses:Home:PropertyFee
 
-    - peer: 万师傅,宜家
+    - peer: 万师傅,宜家,杭州宜家家居有限公司上海分公司
       targetAccount: Expenses:Home:Furniture
+
+    - item: 相框
+      targetAccount: Expenses:Home:Furniture
+
+    # 文具用品
+    - peer: 文具,晨光,得力,国誉
+      targetAccount: Expenses:Home:Stationery
+
+    - item: 文具,笔记本,笔,橡皮,尺子,订书机,文件夹,便签
+      targetAccount: Expenses:Home:Stationery
+
+    # 婴幼儿用品
+    - peer: 母婴,宝宝,婴儿,尿不湿,纸尿裤,尿片,尿布,拉拉裤
+      targetAccount: Expenses:Home:BabySupplies
+
+    - item: 尿不湿,纸尿裤,尿片,尿布,拉拉裤
+      targetAccount: Expenses:Home:BabySupplies
 
     # 健康保险
     - item: 相互宝
       targetAccount: Expenses:Insurance
+
+    - item: 交强险
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Insurance
 
     - item: 药品
       targetAccount: Expenses:Health:Drugs
@@ -130,79 +190,45 @@ wechat:
     - peer: 素问中医,仁济医院,社区卫生
       targetAccount: Expenses:Health:Medical
 
-    - peer: Lucy,Irvin,张立
-      type: 支出
-      txType: 群收款
-      targetAccount: Expenses:Leisure:Sports
-
-    - peer: Lucy,Irvin,张立,羊马菜
-      type: 收入
-      txType: 群收款
-      targetAccount: Expenses:Leisure:Sports
-
-    - peer: 趣运动,西可球类中心,西可体育
-      type: 支出
-      targetAccount: Expenses:Leisure:Sports
-
     # 兴趣爱好
     - item: 打印,手工,加工,拼图,diy,DIY
       targetAccount: Expenses:Leisure:Crafting
-
-    - item: 相框
-      targetAccount: Expenses:Home:Furniture
 
     - peer: 美团
       item: 骑
       targetAccount: Expenses:Transport:Bicycle
 
-    - item: 交通罚没
-      targetAccount: Expenses:Transport:Car:Fines
-
-    # 原有的微信特定规则
-    - peer: 塘桥美好生活馆
+    - peer: Lucy,Irvin,张立,羊马菜,铃宝宝,百家乐,同学汇
       type: 支出
-      targetAccount: Expenses:Food:DinningOut
+      txType: 群收款
+      targetAccount: Expenses:Leisure:Sports
 
-    - peer: 尧力
-      targetAccount: Expenses:Education:Training
-
-
-    # 美团消费规则
-    - peer: 美团平台商户
+    - peer: 趣运动,西可球类中心,西可体育,迪卡侬
       type: 支出
-      minPrice: 0
-      maxPrice: 9.99
-      targetAccount: Expenses:Food:Drink
-    - peer: 美团平台商户
+      targetAccount: Expenses:Leisure:Sports
+
+
+    - peer: 优衣库
       type: 支出
-      minPrice: 10
-      targetAccount: Expenses:Food:Meal
+      targetAccount: Expenses:Shopping:Clothing
+
+    # 购物消费
+    - peer: 优衣库,UNIQLO,H&M,ZARA,GAP,UR,太平鸟,森马,美特斯邦威
+      type: 支出
+      targetAccount: Expenses:Shopping:Clothing
+
+    - peer: 耐克,NIKE,阿迪达斯,ADIDAS,新百伦,NEW BALANCE,匡威,CONVERSE
+      type: 支出
+      targetAccount: Expenses:Shopping:Shoes
+
+    - peer: 周大福,周生生,六福珠宝,老凤祥
+      type: 支出
+      targetAccount: Expenses:Shopping:Jewelry
 
     # 固定支出
     - peer: 房东
       type: 支出
       targetAccount: Expenses:Housing:Rent
-
-
-    - peer: 停车,平安喜乐
-      type: 支出
-      targetAccount: Expenses:Transport:Car:Parking
-
-    - item: 停车,17856
-      type: 支出
-      targetAccount: Expenses:Transport:Car:Parking
-
-    - peer: 特来电
-      type: 支出
-      targetAccount: Expenses:Transport:Car:Charging
-
-    - peer: 石油
-      type: 支出
-      targetAccount: Expenses:Transport:Gas
-
-    - peer: 滴滴
-      type: 支出
-      targetAccount: Expenses:Transport:Taxi
 
     # 收入相关
     - peer: 用户
@@ -236,11 +262,6 @@ wechat:
     - method: 招商银行储蓄卡(0225)
       methodAccount: Assets:Zuo:Savings:CMB:0225
 
-    # 测试规则
-    - peer: 测试时间戳
-      timestamp_range: 1658112487-1658112490 # order_time= 2022-07-18 10:48:09 ts=1658112489
-      targetAccount: Expenses:Travel
-
     # 家庭支出
     - item: 亲属卡
       targetAccount: Expenses:ParentsDaily
@@ -250,3 +271,9 @@ wechat:
 
     - item: 充电宝
       targetAccount: Expenses:Services:Charging
+
+    # 新增规则
+
+    - peer: 盟迪奥
+      type: 支出
+      targetAccount: Expenses:Leisure:Entertainment
