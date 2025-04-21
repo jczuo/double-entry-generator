@@ -184,7 +184,7 @@ alipay:
 
     - category: 服饰装扮
       item: 黄金,周大福,项链
-      targetAccount: Expenses:Clothes:Accessory
+      targetAccount: Expenses:Shopping:Accessories
 
 
     - category: 家居家装
