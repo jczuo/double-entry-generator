@@ -59,11 +59,11 @@ wechat:
       type: 支出
       targetAccount: Expenses:Transport:Taxi
 
-    - item: 高速收费
+    - item: 高速
       type: 支出
       targetAccount: Expenses:Transport:Car:Toll
 
-    - peer: 妙车坊汽车一站式服务
+    - peer: 妙车坊汽车一站式服务,上海华裕集团
       type: 支出
       targetAccount: Expenses:Transport:Car:Maintenance
 
@@ -71,32 +71,34 @@ wechat:
       targetAccount: Expenses:Transport:Car:Fines
 
     # 日常消费分类
-    - peer: 羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料
+    - peer: 零售柜,咖啡,coffee,羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料,霸王茶姬,上海雨奕信息科技有限公司,饮品,静波体育
       targetAccount: Expenses:Food:Drinks
 
-    - item: 矿泉水
+    - item: 矿泉水,纯净水,自贩机
       targetAccount: Expenses:Food:Drinks
 
-    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚,吉士买生鲜生活超市,上海浦东开市客商业有限公司
+    - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚,吉士买生鲜生活超市,上海浦东开市客商业有限公司,LAWSON,奥乐齐
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 饿了么
+    - peer: 饿了么,超市
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司
+    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司,菜馆
       targetAccount: Expenses:Food:DinningOut
 
-    - peer: 塘桥美好生活馆,大牌档,牛肉面,麻辣烫,馄饨,东北小馆,斑鱼府,小吃店,海棠糕,蒸糕,香港茶餐,台味本舖,羊肉馆,云南菜,拉面,煲仔皇
+    - peer: 塘桥美好生活馆,大牌档,牛肉面,麻辣烫,馄饨,东北小馆,斑鱼府,小吃店,海棠糕,蒸糕,香港茶餐,台味本舖,羊肉馆,云南菜,拉面,煲仔皇,餐饮管理,美食,快餐,潮府粥道
       targetAccount: Expenses:Food:DinningOut
 
-    - item: 点餐订单,餐饮
+    - item: 点餐,餐饮,美食,餐厅,拌粉
       targetAccount: Expenses:Food:DinningOut
 
-    - peer: 邵建锋
+    - peer: 邵建锋,鲜果,FASCINO
       targetAccount: Expenses:Food:FruitSnacks
 
+    - item: 锅盔
+      targetAccount: Expenses:Food:FruitSnacks
     # 快递服务
-    - peer: EMS
+    - peer: EMS,顺丰,丰巢
       targetAccount: Expenses:Comm:Express
 
     - item: 寄件费
@@ -107,6 +109,8 @@ wechat:
       targetAccount: Expenses:Health:Beauty
 
 
+    - peer: 上海尧力体育设施有限公司
+      targetAccount: Expenses:Education:Training
 
     # 订阅服务
     - item: 88VIP
@@ -114,6 +118,9 @@ wechat:
       
     - peer: 微软
       targetAccount: Expenses:Education:Software
+
+    - item: Steam
+      targetAccount: Expenses:Subscriptions:Game:Steam
 
     - item: Office365,365office
       targetAccount: Expenses:Subscriptions:Software:Office365
@@ -159,6 +166,8 @@ wechat:
     - item: 相框
       targetAccount: Expenses:Home:Furniture
 
+    - item: 不动产登记
+      targetAccount: Expenses:Finance:ServiceFee
     # 文具用品
     - peer: 文具,晨光,得力,国誉
       targetAccount: Expenses:Home:Stationery
@@ -176,6 +185,9 @@ wechat:
     # 健康保险
     - item: 相互宝
       targetAccount: Expenses:Insurance
+
+    - item: 学平险
+      targetAccount: Expenses:Insurance:Life
 
     - item: 交强险
       type: 支出
@@ -203,7 +215,12 @@ wechat:
       txType: 群收款
       targetAccount: Expenses:Leisure:Sports
 
-    - peer: 趣运动,西可球类中心,西可体育,迪卡侬
+    - peer: 百家乐
+      type: 支出
+      txType: 微信红包
+      targetAccount: Expenses:Leisure:Sports
+
+    - peer: 趣运动,西可球类中心,西可体育,迪卡侬,中羽联
       type: 支出
       targetAccount: Expenses:Leisure:Sports
 
@@ -211,6 +228,10 @@ wechat:
     - peer: 优衣库
       type: 支出
       targetAccount: Expenses:Shopping:Clothing
+
+    - peer: 玩刻
+      type: 支出
+      targetAccount: Expenses:Leisure:Games
 
     # 购物消费
     - peer: 优衣库,UNIQLO,H&M,ZARA,GAP,UR,太平鸟,森马,美特斯邦威
@@ -224,6 +245,12 @@ wechat:
     - peer: 周大福,周生生,六福珠宝,老凤祥
       type: 支出
       targetAccount: Expenses:Shopping:Jewelry
+
+    - peer: 公益基金
+      targetAccount: Expenses:Human:Donation
+
+    - peer: 高路顺
+      targetAccount: Expenses:Finance:ServiceFee
 
     # 固定支出
     - peer: 房东
