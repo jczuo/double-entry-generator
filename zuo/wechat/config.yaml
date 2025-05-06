@@ -35,8 +35,13 @@ wechat:
       txType: 微信红包-退款
       targetAccount: Expenses:Wechat:RedPacket
 
+    # 娱乐消费
+    - peer: 大麦网
+      type: 支出
+      targetAccount: Expenses:Leisure:Entertainment
+
     # 交通出行
-    - peer: 中铁网络,上海铁路局,上铁,北京轨道交通互联网票务,杭州杭港地铁有限公司
+    - peer: 轨道交通,中铁网络,上海铁路局,上铁,北京轨道交通互联网票务,杭州杭港地铁有限公司
       targetAccount: Expenses:Transport:Public
 
     - peer: 停车,平安喜乐,上海国正中心停车场,上海希望医科停车场,INNO创智,上海城投悦城置业有限公司,长泰广场,深圳市顺易通信息科技有限公司,万物云（万科物业母公司）,互联互通停车场,上海益镇物业管理有限公司,上海联讯物业管理有限公司,尚博物业
@@ -55,7 +60,11 @@ wechat:
       type: 支出
       targetAccount: Expenses:Transport:Gas
 
-    - peer: 滴滴
+    - peer: 滴滴,货拉拉
+      type: 支出
+      targetAccount: Expenses:Transport:Taxi
+
+    - item: 先乘后付
       type: 支出
       targetAccount: Expenses:Transport:Taxi
 
@@ -71,10 +80,10 @@ wechat:
       targetAccount: Expenses:Transport:Car:Fines
 
     # 日常消费分类
-    - peer: 零售柜,咖啡,coffee,羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料,霸王茶姬,上海雨奕信息科技有限公司,饮品,静波体育
+    - peer: 无人售货,蜜雪冰城,零售柜,咖啡,coffee,羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料,霸王茶姬,上海雨奕信息科技有限公司,饮品,静波体育
       targetAccount: Expenses:Food:Drinks
 
-    - item: 矿泉水,纯净水,自贩机
+    - item: 矿泉水,纯净水,自贩机,农夫山泉
       targetAccount: Expenses:Food:Drinks
 
     - peer: 沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚,吉士买生鲜生活超市,上海浦东开市客商业有限公司,LAWSON,奥乐齐
@@ -83,16 +92,16 @@ wechat:
     - peer: 饿了么,超市
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司,菜馆
+    - peer: 水煎包,沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司,菜馆
       targetAccount: Expenses:Food:DinningOut
 
-    - peer: 塘桥美好生活馆,大牌档,牛肉面,麻辣烫,馄饨,东北小馆,斑鱼府,小吃店,海棠糕,蒸糕,香港茶餐,台味本舖,羊肉馆,云南菜,拉面,煲仔皇,餐饮管理,美食,快餐,潮府粥道
+    - peer: 小菜,食和家,肉夹馍,凉皮,陕味,餐饮,和盈,塘桥美好生活馆,大牌档,牛肉面,麻辣烫,馄饨,东北小馆,斑鱼府,小吃店,海棠糕,蒸糕,香港茶餐,台味本舖,羊肉馆,云南菜,拉面,煲仔皇,餐饮管理,美食,快餐,潮府粥道
       targetAccount: Expenses:Food:DinningOut
 
-    - item: 点餐,餐饮,美食,餐厅,拌粉
+    - item: 点餐,餐饮,美食,餐厅,拌粉,桂满陇,寿司
       targetAccount: Expenses:Food:DinningOut
 
-    - peer: 邵建锋,鲜果,FASCINO
+    - peer: 邵建锋,鲜果,FASCINO,冰激凌,食品,特产
       targetAccount: Expenses:Food:FruitSnacks
 
     - item: 锅盔
@@ -199,7 +208,7 @@ wechat:
     - peer: 叮当快药
       targetAccount: Expenses:Health:Drugs
 
-    - peer: 素问中医,仁济医院,社区卫生
+    - peer: 素问中医,医院,社区卫生
       targetAccount: Expenses:Health:Medical
 
     # 兴趣爱好
@@ -246,7 +255,7 @@ wechat:
       type: 支出
       targetAccount: Expenses:Shopping:Jewelry
 
-    - peer: 公益基金
+    - peer: 公益基金,福利基金
       targetAccount: Expenses:Human:Donation
 
     - peer: 高路顺
