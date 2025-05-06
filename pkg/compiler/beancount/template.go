@@ -30,6 +30,7 @@ type NormalOrderVars struct {
 	Currency          string
 	Metadata          map[string]string // unordered metadata map
 	Tags              []string
+	Method            string // 支付方式
 }
 
 // 火币买入模版（手续费单位为购买单位货币）

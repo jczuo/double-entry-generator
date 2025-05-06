@@ -211,6 +211,7 @@ func (b *BeanCount) writeBill(file io.Writer, index int) error {
 			Metadata:          o.Metadata,
 			Currency:          currency,
 			Tags:              o.Tags,
+			Method:            o.Method,
 		})
 	case ir.OrderTypeHuobiTrade: // Huobi trades
 		switch o.Type {
@@ -405,10 +406,11 @@ func (b *BeanCount) writeBill(file io.Writer, index int) error {
 		})
 	}
 	if err != nil {
-		return err
+		return fmt.Errorf("write bill error: %v", err)
 	}
-	if _, err := io.WriteString(file, buf.String()); err != nil {
-		return err
+	_, err = io.WriteString(file, buf.String())
+	if err != nil {
+		return fmt.Errorf("write bill error: %v", err)
 	}
 	return nil
 }
