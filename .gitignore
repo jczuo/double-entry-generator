@@ -1,4 +1,5 @@
 # Binaries for programs and plugins
+*.exe
 *.exe~
 *.dll
 *.so
@@ -12,6 +13,7 @@
 
 .vscode/
 .idea/
+bin/
 wasm-dist/
 
 # Alipay records

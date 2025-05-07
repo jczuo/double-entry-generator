@@ -1,7 +1,6 @@
 package wechat
 
 import (
-	"log"
 	"strings"
 )
 
@@ -19,7 +18,6 @@ func getOrderType(ot string) OrderType {
 }
 
 func getTxType(tt string) TxType {
-	log.Printf("解析交易类型: %s", tt)
 	if strings.Contains(tt, string(TxTypeLucky)) {
 		return TxTypeLucky
 	} else if strings.Contains(tt, string(TxTypeConsume)) {
@@ -59,7 +57,6 @@ func getTxType(tt string) TxType {
 	} else if strings.Contains(tt, string(TxTypeOther)) {
 		return TxTypeOther
 	} else {
-		log.Printf("未知交易类型: %s", tt)
 		return TxTypeUnknown
 	}
 }
