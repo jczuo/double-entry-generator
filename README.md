@@ -198,6 +198,14 @@ double-entry-generator translate \
 
 更多问题请查看 [GitHub Issues](https://github.com/deb-sig/double-entry-generator/issues)。
 
+### 手动编译
+
+在项目根目录下执行以下命令：
+
+```bash
+go build -o .\bin\double-entry-generator.exe .\main.go
+```
+
 ## 🤝 贡献
 
 欢迎贡献代码和文档！请查看 [贡献指南](https://deb-sig.github.io/double-entry-generator/contributing/)。
