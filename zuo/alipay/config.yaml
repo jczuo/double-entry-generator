@@ -78,6 +78,12 @@ alipay:
     - peer: 中国计算机学会
       targetAccount: Expenses:Education:Training
 
+    - peer: 杭州深度求索人工智能基础技术研究有限公司
+      targetAccount: Expenses:Subscriptions:AI:DeepSeek
+
+    - peer: Stripe Inc
+      targetAccount: Expenses:Subscriptions:AI:Cursor
+
     - category: 日用百货
       type: 支出
       item: 88VIP
@@ -189,6 +195,13 @@ alipay:
       item: 黄金,周大福,项链
       targetAccount: Expenses:Shopping:Accessories
 
+    - category: 服饰装扮
+      peer: 迪卡侬
+      targetAccount: Expenses:Shopping:Clothing
+
+    - peer: 北京奇付通
+      targetAccount: Expenses:Subscriptions:Software
+
 
     - category: 家居家装
       targetAccount: Expenses:Home:Furniture
@@ -235,6 +248,9 @@ alipay:
 
     - method: 浦发银行信用卡(1765)
       methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
+
+    - method: 招商银行信用卡(7102)
+      methodAccount: Liabilities:Zuo:CreditCard:CMB:7102
 
     - method: 招商银行储蓄卡(9332)
       methodAccount: Assets:Zuo:Savings:CMB:0225
