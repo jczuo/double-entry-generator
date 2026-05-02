@@ -75,6 +75,9 @@ alipay:
       peer: 税务
       targetAccount: Expenses:Finance:Taxes
 
+    - peer: 中国计算机学会
+      targetAccount: Expenses:Education:Training
+
     - category: 日用百货
       type: 支出
       item: 88VIP
@@ -199,7 +202,7 @@ alipay:
     - peer: 国网上海市电力公司(缴费),供电局
       targetAccount: Expenses:Home:Utilities:Electricity
 
-    - peer: 上海浦东威立雅自来水有限公司,南汇自来水
+    - peer: 上海浦东威立雅自来水有限公司,南汇自来水,上海城投水务
       targetAccount: Expenses:Home:Utilities:Water
 
     - peer: 滴露
