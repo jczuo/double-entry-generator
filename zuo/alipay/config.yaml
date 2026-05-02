@@ -120,6 +120,9 @@ alipay:
     - peer: 代驾
       targetAccount: Expenses:Transport:Car:Chauffeur
 
+    - peer: 滴滴货运
+      targetAccount: Expenses:Transport:Freight
+
     - category: 文化休闲
       targetAccount: Expenses:Leisure:Entertainment
 
@@ -222,6 +225,9 @@ alipay:
       targetAccount: Expenses:Groceries
 
     - peer: 星巴克
+      targetAccount: Expenses:Food:Drinks
+
+    - item: NOWWA,挪瓦咖啡
       targetAccount: Expenses:Food:Drinks
 
     - item: 相互宝
