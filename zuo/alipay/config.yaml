@@ -107,6 +107,9 @@ alipay:
     - category: 爱车养车
       targetAccount: Expenses:Transport:Car
 
+    - item: ETC通行费
+      targetAccount: Expenses:Transport:Car:Toll
+
     - peer: 停车
       targetAccount: Expenses:Transport:Car:Parking
 
@@ -155,6 +158,12 @@ alipay:
 
     - item: Office365,365office
       targetAccount: Expenses:Subscriptions:Software:Office365
+
+    - peer: 剪映服务
+      targetAccount: Expenses:Subscriptions:Software
+
+    - peer: 奈飞小铺
+      targetAccount: Expenses:Subscriptions:Video:Netflix
 
     - peer: 爱奇艺
       targetAccount: Expenses:Subscriptions:Video:IQiYi
