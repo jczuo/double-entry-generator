@@ -233,6 +233,10 @@ wechat:
       txType: 群收款
       targetAccount: Expenses:Leisure:Sports
 
+    - peer: 宋燕
+      type: 支出
+      targetAccount: Expenses:Leisure:Sports
+
     - peer: 百家乐
       type: 支出
       txType: 微信红包
@@ -313,6 +317,9 @@ wechat:
 
     # 家庭支出
     - item: 亲属卡
+      targetAccount: Expenses:ParentsDaily
+
+    - txType: 亲属卡交易
       targetAccount: Expenses:ParentsDaily
 
     - txType: 亲属卡交易-退款
