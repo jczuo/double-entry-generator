@@ -233,7 +233,7 @@ wechat:
       txType: 群收款
       targetAccount: Expenses:Leisure:Sports
 
-    - peer: 宋燕
+    - peer: 宋燕,lyle,Terence 张立
       type: 支出
       targetAccount: Expenses:Leisure:Sports
 
@@ -331,5 +331,9 @@ wechat:
     # 新增规则
 
     - peer: 盟迪奥
+      type: 支出
+      targetAccount: Expenses:Leisure:Entertainment
+
+    - peer: INNOSOCIAL
       type: 支出
       targetAccount: Expenses:Leisure:Entertainment
