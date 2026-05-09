@@ -86,7 +86,11 @@ wechat:
       targetAccount: Expenses:Transport:Car:Fines
 
     # 日常消费分类
-    - peer: CAFE,奈雪的茶,无人售货,蜜雪冰城,零售,咖啡,coffee,羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料,霸王茶姬,上海雨奕信息科技有限公司,饮品,静波体育
+    - peer: CAFE,奈雪的茶,无人售货,蜜雪冰城,零售,咖啡,coffee,羽神,挥拍羽毛球,Manner,咖啡馆,球馆,七位数体育培训园,TIMHORTONS,星巴克,M Stand,cafe,COSTA,煦荣,饮料,霸王茶姬,上海雨奕信息科技有限公司,饮品,静波体育,Cotti Coffee,CICI COFFEE,拉比卡
+      targetAccount: Expenses:Food:Drinks
+
+    - peer: 美团
+      item: 瑞幸,库迪,Kcoffee,咖啡,Coffee
       targetAccount: Expenses:Food:Drinks
 
     - item: 矿泉水,纯净水,自贩机,农夫山泉
@@ -120,7 +124,7 @@ wechat:
       targetAccount: Expenses:Comm:Express
 
     # 个人护理
-    - peer: 宜剪,美发
+    - peer: 宜剪,美发,蒂奇尼
       targetAccount: Expenses:Health:Beauty
 
 
@@ -175,7 +179,7 @@ wechat:
       targetAccount: Expenses:Home:Utilities:Water
 
     # 居家服务
-    - peer: 万物云空间,郭莉莉,世邦泰和
+    - peer: 万物云空间,郭莉莉,世邦泰和,金帆物业,宁波中建物业
       targetAccount: Expenses:Home:PropertyFee
 
     - peer: 万师傅,宜家,杭州宜家家居有限公司上海分公司
@@ -242,7 +246,7 @@ wechat:
       txType: 微信红包
       targetAccount: Expenses:Leisure:Sports
 
-    - peer: 趣运动,西可球类中心,西可体育,迪卡侬,中羽联
+    - peer: 趣运动,西可球类中心,西可体育,迪卡侬,中羽联,青芽运动,国创薰风,闪动体育,上海明培体育,喵喵,上海动宜动,大吉
       type: 支出
       targetAccount: Expenses:Leisure:Sports
 
