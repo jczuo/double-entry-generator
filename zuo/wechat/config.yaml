@@ -93,7 +93,10 @@ wechat:
       item: 瑞幸,库迪,Kcoffee,咖啡,Coffee
       targetAccount: Expenses:Food:Drinks
 
-    - item: 矿泉水,纯净水,自贩机,农夫山泉
+    - item: 明培体育
+      targetAccount: Expenses:Leisure:Sports
+
+    - item: 矿泉水,纯净水,自贩机,农夫山泉,周边销售
       targetAccount: Expenses:Food:Drinks
 
     - peer: 面包,7-11,沃尔玛,盒马,山姆会员商店,便利,喜士多,魔盒CITYBOX,全家,罗森,邵万生,铜锣烧,牛奶棚,吉士买生鲜生活超市,上海浦东开市客商业有限公司,LAWSON,奥乐齐
@@ -102,7 +105,7 @@ wechat:
     - peer: 饿了么,超市,快客,好德,好特卖
       targetAccount: Expenses:Food:Groceries
       
-    - peer: 火锅,烤肉,米线,水煎包,沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司,菜馆
+    - peer: 火锅,烤肉,米线,水煎包,沙县,饭,餐厅,老乡鸡,炊烟,陈香贵,肯德基,麦当劳,迷迭巷,西贝,望师傅,柳州螺蛳粉,太二,小辣椒,华铁旅客,金桔香港茶餐,赣姐江西小炒大王,重庆小面川菜馆,张子肉串,北京羊城美食,二小姐镇江锅盖面,7柒不腻,香喜嘻兰州牛肉面,杭州盛和商业旅游服务有限公司,北京首都机场餐饮发展有限公司,菜馆,啤啤猫,烧烤小酒馆
       targetAccount: Expenses:Food:DinningOut
 
     - peer: 点心,麻六记,零贰玖,小菜,食和家,肉夹馍,凉皮,陕味,餐饮,和盈,塘桥美好生活馆,大牌档,牛肉面,麻辣烫,馄饨,东北小馆,斑鱼府,小吃店,海棠糕,蒸糕,香港茶餐,台味本舖,羊肉馆,云南菜,拉面,煲仔皇,餐饮管理,美食,快餐,潮府粥道
@@ -119,6 +122,9 @@ wechat:
     # 快递服务
     - peer: EMS,顺丰,丰巢
       targetAccount: Expenses:Comm:Express
+
+    - peer: 书屋,书店,书城
+      targetAccount: Expenses:Education:Books
 
     - item: 寄件费
       targetAccount: Expenses:Comm:Express
@@ -246,7 +252,7 @@ wechat:
       txType: 微信红包
       targetAccount: Expenses:Leisure:Sports
 
-    - peer: 趣运动,西可球类中心,西可体育,迪卡侬,中羽联,青芽运动,国创薰风,闪动体育,上海明培体育,喵喵,上海动宜动,大吉
+    - peer: 趣运动,西可球类中心,西可体育,迪卡侬,中羽联,青芽运动,国创薰风,闪动体育,上海明培体育,喵喵,上海动宜动,大吉,槌饵菟,🐟,上海康格体育,fast运动中心,龙翼羽毛球,上海优羽荟体育,鸿飞·羽里,五氧健身,杨浦体育馆
       type: 支出
       targetAccount: Expenses:Leisure:Sports
 
