@@ -1,10 +1,25 @@
 defaultMinusAccount: Assets:FIXME
 defaultPlusAccount: Expenses:FIXME
-defaultCashAccount: Assets:Bank:CN:ICBC
+defaultCashAccount: Assets:Zuo:Savings:ICBC:2042
 defaultCurrency: CNY
 title: 测试
 icbc:
   rules:
+    - txType: 他行汇入
+      peerAccountNum: "6214****0225"
+      targetAccount: Assets:Zuo:Savings:CMB:0225
+
+    - txType: 跨行汇款
+      peerAccountNum: "6214****0225"
+      targetAccount: Assets:Zuo:Savings:CMB:0225
+
+    - peerAccountNum: "1001****2505"
+      txType: 缴费
+      targetAccount: Expenses:Education:Tuition
+
+    - txType: 利息
+      targetAccount: Income:Zuo:Savings:Interest
+
     - peer: 财付通-,支付宝-
       ignore: true
     - peer: 支付宝

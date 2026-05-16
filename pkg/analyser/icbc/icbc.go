@@ -87,6 +87,13 @@ func (i Icbc) GetAccountsAndTags(o *ir.Order, cfg *config.Config, target, provid
 				match = false
 			}
 		}
+		if r.PeerAccountNum != nil {
+			if peerAccountNum, exists := o.Metadata["peerAccountNum"]; exists {
+				match = matchFunc(*r.PeerAccountNum, peerAccountNum, sep, match)
+			} else {
+				match = false
+			}
+		}
 
 		if match {
 			if r.Ignore {

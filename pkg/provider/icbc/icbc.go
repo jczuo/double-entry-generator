@@ -86,5 +86,10 @@ func (icbc *Icbc) Translate(filename string) (*ir.IR, error) {
 		}
 	}
 	log.Printf("Finished to parse the file %s", filename)
+	// ICBC CSV is newest-first; reverse so same-day transactions retain
+	// correct chronological order when compiler uses stable sort.
+	for l, r := 0, len(icbc.Orders)-1; l < r; l, r = l+1, r-1 {
+		icbc.Orders[l], icbc.Orders[r] = icbc.Orders[r], icbc.Orders[l]
+	}
 	return icbc.convertToIR(), nil
 }
