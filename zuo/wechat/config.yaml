@@ -347,3 +347,242 @@ wechat:
     - peer: INNOSOCIAL
       type: 支出
       targetAccount: Expenses:Leisure:Entertainment
+
+    # 京东
+    - peer: 京东商城平台商户,JD,京东
+      targetAccount: Expenses:Shopping:Online
+
+    # 电子产品
+    - peer: 联想商城
+      targetAccount: Expenses:Shopping:Electronics
+    - peer: Apple
+      type: 支出
+      targetAccount: Expenses:Shopping:Electronics
+
+    # 旅游酒店
+    - peer: 携程,去哪儿网
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 华住酒店集团,如家酒店
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 呀诺达,海南呀诺达
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 美高梅,中粮酒店
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 熊猫基地
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 浙江戴诺维酒店管理有限公司
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 百度平台商家
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 浣花黉台酒店
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 成都杜甫草堂浣花祠
+      targetAccount: Expenses:Leisure:Travel
+
+    # 餐饮
+    - peer: 上海包好,上海临虹路包好包子店,巴比全麦老面小笼包,谷田稻香,卡德尔大叔,京夫人烤鸭,萨莉亚,家府潮汕菜,麦园馒头,冒大仙
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 趣茗轩
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 安琪鲜饮
+      targetAccount: Expenses:Food:Drinks
+    - peer: 冷饮批发,五丰冷饮,糖小满
+      targetAccount: Expenses:Food:Drinks
+    - peer: 上海锦喆物联网科技有限公司
+      targetAccount: Expenses:Food:Drinks
+    - peer: 光明随心订
+      targetAccount: Expenses:Food:Groceries
+    - peer: 快团团
+      targetAccount: Expenses:Food:Groceries
+
+    # 医疗健康
+    - peer: 上海市第一妇婴保健院,上海爱康名门门诊部
+      targetAccount: Expenses:Health:Medical
+    - peer: 丁香医生
+      targetAccount: Expenses:Health:Medical
+
+    # 保险公益
+    - peer: 上海惠民保,厚积保险经纪,水滴筹,科讯保险经纪
+      targetAccount: Expenses:Insurance
+    - peer: 中国平安财产保险股份有限公司上海分公司
+      targetAccount: Expenses:Insurance
+
+    # 教育培训
+    - peer: 核桃编程
+      targetAccount: Expenses:Education:Training
+    - peer: 浦东新区围棋协会
+      targetAccount: Expenses:Education:Training
+
+    # 运动
+    - peer: 樱发羽毛球,熊国宝体育科技
+      targetAccount: Expenses:Leisure:Sports
+    - peer: 上海天健体育科技发展有限公司
+      targetAccount: Expenses:Leisure:Sports
+
+    # 娱乐
+    - peer: 淘票票
+      targetAccount: Expenses:Leisure:Entertainment
+    - peer: 亲子乐园
+      targetAccount: Expenses:Leisure:Entertainment
+    - peer: 上海久事智慧体育有限公司
+      targetAccount: Expenses:Leisure:Entertainment
+    - peer: 上海灵印文化传媒有限公司
+      targetAccount: Expenses:Leisure:Entertainment
+    - peer: 上海博物馆文化创意有限公司服务部
+      targetAccount: Expenses:Leisure:Entertainment
+
+    # 通讯
+    - peer: 上海联通新虹
+      targetAccount: Expenses:Comm:PhonePlan
+
+    # 父母转账
+    - peer: 毛才容,左长生
+      type: 支出
+      targetAccount: Expenses:ParentsDaily
+
+    # 停车（个人收款码）
+    - peer: 杨俊杰,南方的我,黄浦江畔
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Parking
+
+    # 羽毛球群收款
+    - peer: 杜友澳
+      type: 支出
+      targetAccount: Expenses:Leisure:Sports
+
+    # 证照缴费
+    - peer: 上海一网通办缴费平台
+      targetAccount: Expenses:Finance:ServiceFee
+
+    # 汽车服务
+    - peer: 上海弘仁锐豪汽车销售服务有限公司
+      targetAccount: Expenses:Transport:Car:Maintenance
+
+    # 成都旅游餐饮
+    - peer: 陈麻婆豆腐,成都凤麟楼,双流老妈兔头,西月城谭豆花,玉林串串香春熙店,灵芝烧烤,张烤鸭青石桥,钵问
+      targetAccount: Expenses:Food:DinningOut
+
+    # 各地餐饮
+    - peer: 唐伯府私房菜,金美華軒,老张面馆,汪师傅锅贴,西安名吃,马来一下,老海口蒜香鸡翅
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 田记铁板豆腐,羊记梅菜扣肉饼,邱记老鸭店,龍儿丨顺庆店,海南自贸区德航集团有限公司
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 山东杂粮煎饼,阜阳格拉条牛肉汤上海东华美路店
+      targetAccount: Expenses:Food:DinningOut
+
+    # 水果零食
+    - peer: 上海仓桥翠冠水晶梨,宝栗王,橙市超人,姐妹椰子批发,绝味,岳林南北干货
+      targetAccount: Expenses:Food:FruitSnacks
+
+    # 饮品
+    - peer: 超级盒子,上海乐之岛体育健身水吧
+      targetAccount: Expenses:Food:Drinks
+
+    # 便利店杂货
+    - peer: 逸刻,美宜佳,路每家,MYFARM中国
+      targetAccount: Expenses:Food:Groceries
+
+    # 旅游景点/住宿/活动
+    - peer: 苏州市拙政园,都江堰市二王庙,成都杜甫草堂,东垣古城
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 下沉广场游乐,阿罗哈,缪斯听听
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 天星月亮车,库拜莱,商家直达,快乐为名,土福湾沙滩
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 民宿咨询,海南陵水御泉,海南钧城徕福酒店
+      targetAccount: Expenses:Leisure:Travel
+    - peer: 浣花黉台酒店
+      targetAccount: Expenses:Leisure:Travel
+
+    # 旅行途中扫码小贩（成都）
+    - peer: 寻川荣集,藏宝斋,百璞堂
+      targetAccount: Expenses:Leisure:Travel
+
+    # 加油（海南）
+    - peer: 陵水达园有限公司英州加油站
+      targetAccount: Expenses:Transport:Gas
+
+    # 运动
+    - peer: 北京花香盛世国际体育文化发展有限公司
+      targetAccount: Expenses:Leisure:Sports
+
+    # 娱乐
+    - peer: 成都市捌度文化传播,上海真有趣实业
+      targetAccount: Expenses:Leisure:Entertainment
+    - peer: 北京首都国际机场股份有限公司
+      targetAccount: Expenses:Leisure:Entertainment
+
+    # 母婴
+    - peer: 南城县一然轩子婴童馆
+      targetAccount: Expenses:Home:BabySupplies
+
+    # 保险
+    - peer: 平安(昕菲)
+      targetAccount: Expenses:Insurance
+
+    # Costco会员
+    - peer: Costco开市客
+      targetAccount: Expenses:Subscriptions:Shopping
+
+    # 礼物
+    - peer: 汤洋
+      type: 支出
+      targetAccount: Expenses:Shopping:Gifts
+
+    # 父母寿宴
+    - peer: 小湘荟
+      type: 支出
+      targetAccount: Expenses:Human:Parents
+
+    # 孩子左蔚熙奖金转账
+    - peer: 左蔚熙
+      item: 羽毛球七级考试通过,编程考级通过奖金
+      targetAccount: Assets:WeiXi:WeChat:Wallet
+    - peer: 左蔚熙
+      item: 微信转账
+      targetAccount: Expenses:Education:Training
+
+    # 孩子班费（干干Eva代收）
+    - peer: 干干Eva
+      targetAccount: Expenses:Education:Training
+
+    # 转账给钱的微信（王茜昵称）
+    - peer: 王茜
+      type: 支出
+      targetAccount: Assets:Qian:WeChat:Wallet
+
+    # 杂项个人支付
+    - peer: 小勇,周煜佳,王凤兰,雪燕,Hi   jun
+      type: 支出
+      targetAccount: Expenses:Misc
+
+    # 刘洁赟（运动收款）
+    - peer: 刘洁赟
+      type: 支出
+      targetAccount: Expenses:Leisure:Sports
+
+    # 购物零售
+    - peer: 名创优品
+      targetAccount: Expenses:Misc
+    - peer: 淮安市智慧缘文化传播有限公司的小店
+      targetAccount: Expenses:Shopping:Online
+
+    # 餐饮
+    - peer: 东北一绝
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 金海华赫本时光奥体商业中心店
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 山塘人家
+      targetAccount: Expenses:Food:DinningOut
+    - peer: 浙江省商业集团有限公司
+      targetAccount: Expenses:Food:DinningOut
+
+    # 饮品
+    - peer: 湖南茶悦文化产业发展集团有限公司
+      targetAccount: Expenses:Food:Drinks
+    - peer: 上海天虹国际大酒店有限公司
+      targetAccount: Expenses:Food:Drinks
+
+    # 运动（趣运动 App 旗下）
+    - peer: 广州柠蜜信息科技有限公司
+      targetAccount: Expenses:Leisure:Sports
