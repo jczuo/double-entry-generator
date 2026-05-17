@@ -527,7 +527,7 @@ wechat:
     # 礼物
     - peer: 汤洋
       type: 支出
-      targetAccount: Expenses:Shopping:Gifts
+      targetAccount: Expenses:Human:Gifts
 
     # 父母寿宴
     - peer: 小湘荟
