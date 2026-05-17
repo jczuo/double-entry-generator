@@ -354,10 +354,10 @@ wechat:
 
     # 电子产品
     - peer: 联想商城
-      targetAccount: Expenses:Shopping:Electronics
+      targetAccount: Expenses:Home:Appliances
     - peer: Apple
       type: 支出
-      targetAccount: Expenses:Shopping:Electronics
+      targetAccount: Expenses:Home:Appliances
 
     # 旅游酒店
     - peer: 携程,去哪儿网
