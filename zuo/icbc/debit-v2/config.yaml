@@ -17,6 +17,20 @@ icbc:
       txType: 缴费
       targetAccount: Expenses:Education:Tuition
 
+    - peerAccountNum: "1001****2127"
+      targetAccount: Expenses:Education:Tuition
+
+    - peerAccountNum: "1001****5185"
+      targetAccount: Expenses:Education:Tuition
+
+    - txType: 跨行汇款
+      peerAccountNum: "6214****9332"
+      targetAccount: Assets:Zuo:Savings:CMB:9332
+
+    - txType: 网转
+      peerAccountNum: "6212****2492"
+      targetAccount: Assets:WeiRan:Savings:ICBC:2492
+
     - txType: 利息
       targetAccount: Income:Zuo:Savings:Interest
 
