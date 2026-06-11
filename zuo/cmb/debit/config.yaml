@@ -1,0 +1,66 @@
+defaultMinusAccount: Assets:Zuo:Savings:CMB:0225
+defaultPlusAccount: Expenses:FIXME
+defaultCashAccount: Assets:Zuo:Savings:CMB:0225
+defaultCurrency: CNY
+title: 左 CMB 储蓄卡 0225
+cmb:
+  rules:
+    # 微信/支付宝扫码付款：已由微信/支付宝账单记录，忽略避免重复
+    - item: 财付通-微信支付-
+      ignore: true
+    - item: 支付宝-
+      ignore: true
+
+    # CMB → ICBC:2042 自转：ICBC 账单已记录两侧，此处忽略
+    - peer: 6222081001002812042
+      ignore: true
+
+    # 工资
+    - txType: 代发工资
+      targetAccount: Income:Zuo:Salary
+
+    # 报销款
+    - txType: 报销款
+      targetAccount: Income:Zuo:Salary
+
+    # 保险理赔收入
+    - peer: 太平洋健康保险股份有限公司
+      targetAccount: Income:Zuo:Insurance
+
+    # 转账到 CCB:0859（还潍坊十村房贷资金归集）
+    - item: 还潍坊十村房贷
+      targetAccount: Assets:Zuo:Savings:CCB:0859
+
+    # 还浦发信用卡 SPDB:1765（手动还款）
+    - peer: 377187116121765
+      targetAccount: Liabilities:Zuo:CreditCard:SPDB:1765
+
+    # CMB 信用卡自动还款 CMB:7102
+    - txType: 信用卡自动还款
+      targetAccount: Liabilities:Zuo:CreditCard:CMB:7102
+
+    # 还借款给左玲
+    - peer: 6222801595021004423
+      targetAccount: Liabilities:Zuo:Payable:ZuoLing
+
+    # 蔚来汽车电池租赁费（通联-富邦华一银行）
+    - peer: 富邦华一银行
+      targetAccount: Expenses:Transport:Car:BaaS
+
+    # 美团餐饮（银联直扣，非微信/支付宝）
+    - item: 美团-
+      targetAccount: Expenses:Food:Takeout
+    - peer: （特约）美团
+      targetAccount: Expenses:Food:Takeout
+
+    # 银行账户结息
+    - txType: 账户结息
+      targetAccount: Income:Zuo:Savings:Interest
+
+    # Qian ICBC:1014 与 CMB:0225 之间的互转
+    - peer: 6222001001128671014
+      targetAccount: Assets:Qian:Savings:ICBC:1014
+
+    # 平安财产险保费支出（上海分公司）
+    - peer: 中国平安财产保险股份有限公司上海分公司
+      targetAccount: Expenses:Transport:Car:Insurance
