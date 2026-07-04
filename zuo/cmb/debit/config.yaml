@@ -10,10 +10,33 @@ cmb:
       ignore: true
     - item: 支付宝-
       ignore: true
+    # 快捷支付/退款（精确匹配）：全部由微信/支付宝账单已记录；银联快捷支付不匹配此规则
+    - txType: 快捷支付
+      fullMatch: true
+      ignore: true
+    - txType: 快捷退款
+      fullMatch: true
+      ignore: true
 
     # CMB → ICBC:2042 自转：ICBC 账单已记录两侧，此处忽略
     - peer: 6222081001002812042
       ignore: true
+
+    # CMB → CMB:4161 个人养老金缴存
+    - peer: 6212760441954161
+      targetAccount: Assets:Zuo:Savings:CMB:4161
+
+    # CMB ↔ SPAB:4051 互转（自有平安银行账户）
+    - peer: 6230580000200864051
+      targetAccount: Assets:Zuo:Savings:SPAB:4051
+
+    # CMB ↔ ABC:7911 互转（自有农业银行账户）
+    - peer: 6228480031319387911
+      targetAccount: Assets:Zuo:Savings:ABC:7911
+
+    # CMB ↔ BOSC:3172 互转（自有上海银行账户）
+    - peer: 620522001033823172
+      targetAccount: Assets:Zuo:Savings:BOSC:3172
 
     # 工资
     - txType: 代发工资
@@ -30,10 +53,24 @@ cmb:
     # 转账到 CCB:0859（还潍坊十村房贷资金归集）
     - item: 还潍坊十村房贷
       targetAccount: Assets:Zuo:Savings:CCB:0859
+    # CMB ↔ CCB:0859 自转（2025年无客户摘要时通过账号匹配）
+    - peer: 6217001210061890859
+      targetAccount: Assets:Zuo:Savings:CCB:0859
+    # 还房贷（2024年对手信息仅显示"还房贷"无账号，固定转入CCB:0859）
+    - peer: 还房贷
+      targetAccount: Assets:Zuo:Savings:CCB:0859
 
     # 还浦发信用卡 SPDB:1765（手动还款）
     - peer: 377187116121765
       targetAccount: Liabilities:Zuo:CreditCard:SPDB:1765
+
+    # 还浦发信用卡 SPDB:1765（特约自动还款渠道）
+    - peer: 浦发银行(信用卡还款)
+      targetAccount: Liabilities:Zuo:CreditCard:SPDB:1765
+
+    # 还建设银行 ETC 信用卡 CCB:2098
+    - peer: 6259650884802098
+      targetAccount: Liabilities:Zuo:CreditCard:CCB:2098
 
     # CMB 信用卡自动还款 CMB:7102
     - txType: 信用卡自动还款
@@ -52,6 +89,41 @@ cmb:
       targetAccount: Expenses:Food:Takeout
     - peer: （特约）美团
       targetAccount: Expenses:Food:Takeout
+    # 美团关联公司（2025年无客户摘要时通过商户名匹配）
+    - peer: 北京三快在线科技有限公司
+      targetAccount: Expenses:Food:Takeout
+    - peer: 厦门三快在线科技有限公司
+      targetAccount: Expenses:Food:Takeout
+    - peer: 重庆三快在线科技有限公司
+      targetAccount: Expenses:Food:Takeout
+    - peer: 上海象鲜网络科技有限公司
+      targetAccount: Expenses:Food:Takeout
+    - peer: 上海淘气餐饮管理有限公司
+      targetAccount: Expenses:Food:Takeout
+    - peer: 上海火神餐饮管理有限公司
+      targetAccount: Expenses:Food:Takeout
+    - peer: 上海康健餐饮管理有限公司
+      targetAccount: Expenses:Food:Takeout
+
+    # 微信红包（银联直扣）
+    - peer: 微信红包
+      targetAccount: Expenses:Human:RedPacket
+
+    # 药房购药
+    - peer: 药房
+      targetAccount: Expenses:Health:Drugs
+
+    # 北京一卡通充值（公共交通）
+    - peer: 北京市政交通一卡通有限公司
+      targetAccount: Expenses:Transport:Public
+
+    # 中国铁路网络（高铁/动车票）
+    - peer: 铁路网络
+      targetAccount: Expenses:Transport:Public
+
+    # 摩拜单车
+    - peer: 摩拜
+      targetAccount: Expenses:Transport:Bicycle
 
     # 银行账户结息
     - txType: 账户结息
@@ -64,3 +136,35 @@ cmb:
     # 平安财产险保费支出（上海分公司）
     - peer: 中国平安财产保险股份有限公司上海分公司
       targetAccount: Expenses:Transport:Car:Insurance
+
+    # 百年人寿（左蔚熙重疾险）
+    - peer: 百年人寿保险股份有限公司
+      targetAccount: Expenses:Insurance:Health:Critical
+
+    # 光大永明人寿（王茜重疾险）
+    - peer: 光大永明人寿保险有限公司
+      targetAccount: Expenses:Insurance:Health:Critical
+
+    # 房租（陈凌燕，山泉花苑）
+    - peer: 陈凌燕
+      targetAccount: Expenses:Home:Rental
+
+    # 上海院子购房首付（2025-01 房地产资金管理公司）
+    - peer: 上海市房地产交易资金管理有限公司
+      targetAccount: Assets:Fixed:House:ShangHaiYuanZi
+
+    # 上海院子契税（税务局直扣）
+    - peer: 国家税务总局上海市税务局
+      targetAccount: Expenses:Finance:Taxes
+
+    # 奥乐齐超市（上海）
+    - peer: 奥乐齐商业（上海）有限公司
+      targetAccount: Expenses:Food:Groceries
+
+    # 商户名含"餐饮"的通用规则（含匹配，覆盖大多数餐厅直扣）
+    - peer: 餐饮
+      targetAccount: Expenses:Food:DinningOut
+
+    # 浆小白（外卖平台）
+    - peer: 浆小白
+      targetAccount: Expenses:Food:Takeout
