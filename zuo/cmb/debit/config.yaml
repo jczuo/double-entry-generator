@@ -5,6 +5,10 @@ defaultCurrency: CNY
 title: 左 CMB 储蓄卡 0225
 cmb:
   rules:
+    # 蔚来汽车电池租赁费（通联-富邦华一银行）：直接从CMB扣，不经过微信/支付宝，必须先于快捷支付ignore规则
+    - peer: 富邦华一银行
+      targetAccount: Expenses:Transport:Car:BaaS
+
     # 微信/支付宝扫码付款：已由微信/支付宝账单记录，忽略避免重复
     - item: 财付通-微信支付-
       ignore: true
@@ -79,10 +83,6 @@ cmb:
     # 还借款给左玲
     - peer: 6222801595021004423
       targetAccount: Liabilities:Zuo:Payable:ZuoLing
-
-    # 蔚来汽车电池租赁费（通联-富邦华一银行）
-    - peer: 富邦华一银行
-      targetAccount: Expenses:Transport:Car:BaaS
 
     # 美团餐饮（银联直扣，非微信/支付宝）
     - item: 美团-
