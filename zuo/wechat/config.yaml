@@ -50,7 +50,7 @@ wechat:
       maxPrice: 20
       targetAccount: Expenses:Transport:Car:Parking
 
-    - peer: 申江怡德,一生平安,停车,平安喜乐,上海国正中心停车场,上海希望医科停车场,INNO创智,上海城投悦城置业有限公司,长泰广场,深圳市顺易通信息科技有限公司,万物云（万科物业母公司）,互联互通停车场,上海益镇物业管理有限公司,上海联讯物业管理有限公司,尚博物业
+    - peer: 申江怡德,一生平安,停车,平安喜乐,上海国正中心停车场,上海希望医科停车场,INNO创智,上海城投悦城置业有限公司,长泰广场,深圳市顺易通信息科技有限公司,万物云（万科物业母公司）,互联互通停车场,上海益镇物业管理有限公司,上海联讯物业管理有限公司,尚博物业,张少阳
       type: 支出
       targetAccount: Expenses:Transport:Car:Parking
 
@@ -153,6 +153,9 @@ wechat:
     - item: Office365,365office
       targetAccount: Expenses:Subscriptions:Software:Office365
 
+    - peer: 聚好看科技
+      targetAccount: Expenses:Subscriptions:Video
+
     - peer: 爱奇艺,银河奇异果
       targetAccount: Expenses:Subscriptions:Video:IQiYi
 
@@ -238,7 +241,7 @@ wechat:
       item: 骑,单车
       targetAccount: Expenses:Transport:Bicycle
 
-    - peer: Lucy,Irvin,张立,羊马菜,铃宝宝,百家乐,同学汇
+    - peer: Lucy,Irvin,张立,羊马菜,铃宝宝,百家乐,同学汇,胡萝卜
       type: 支出
       txType: 群收款
       targetAccount: Expenses:Leisure:Sports
