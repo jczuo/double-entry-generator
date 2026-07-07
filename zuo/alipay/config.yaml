@@ -273,6 +273,9 @@ alipay:
     - method: 农业银行储蓄卡(7911)
       methodAccount: Assets:Zuo:Savings:ABC:7911
 
+    - method: 花呗
+      methodAccount: Liabilities:Alipay:HuaBei
+
     # 交易类型为其他
     - type: 不计收支 #余额宝收入
       item: 收益发放
