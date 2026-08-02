@@ -180,6 +180,12 @@ alipay:
     - peer: App Store & Apple Music
       targetAccount: Expenses:Subscriptions:Music:AppleMusic
 
+    - item: 咖啡豆
+      targetAccount: Expenses:Food:Groceries
+
+    - item: qq音乐
+      targetAccount: Expenses:Subscriptions:Music:QQMusic
+
 
     - category: 充值缴费
       peer: 中国电信
