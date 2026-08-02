@@ -168,6 +168,10 @@ wechat:
     - item: 试卷宝
       targetAccount: Expenses:Subscriptions:Study:ShiJuanBao
 
+    - peer: 深圳市腾讯计算机系统有限公司
+      item: 预付费自动续费
+      targetAccount: Expenses:Subscriptions:WeRead
+
     # 生活缴费
     - peer: 中国电信
       targetAccount: Expenses:Comm:Internet
