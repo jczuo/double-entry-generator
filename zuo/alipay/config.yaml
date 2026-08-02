@@ -269,6 +269,8 @@ alipay:
 
     - method: 招商银行储蓄卡(9332)
       methodAccount: Assets:Zuo:Savings:CMB:0225
+    - method: 招商银行储蓄卡(0225)
+      methodAccount: Assets:Zuo:Savings:CMB:0225
 
     - method: 农业银行储蓄卡(7911)
       methodAccount: Assets:Zuo:Savings:ABC:7911
