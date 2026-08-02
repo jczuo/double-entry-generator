@@ -177,6 +177,9 @@ alipay:
     - item: 试卷宝
       targetAccount: Expenses:Subscriptions:Study:ShiJuanBao
 
+    - peer: App Store & Apple Music
+      targetAccount: Expenses:Subscriptions:Music:AppleMusic
+
 
     - category: 充值缴费
       peer: 中国电信
