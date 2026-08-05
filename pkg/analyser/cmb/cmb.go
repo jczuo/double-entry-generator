@@ -48,6 +48,7 @@ func (c Cmb) GetAccountsAndTags(o *ir.Order, cfg *config.Config, target, provide
 
 	// method account (bank card account)
 	if o.Type == ir.TypeRecv {
+		resMinus = cfg.DefaultPlusAccount
 		resPlus = cashAccount
 	} else {
 		resMinus = cashAccount
