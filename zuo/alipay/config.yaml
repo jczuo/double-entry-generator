@@ -273,6 +273,9 @@ alipay:
     - method: 浦发银行信用卡(1765)
       methodAccount: Liabilities:Zuo:CreditCard:SPDB:1765
 
+    - method: 浦发银行信用卡(9455)
+      methodAccount: Liabilities:Zuo:CreditCard:SPDB:9455
+
     - method: 招商银行信用卡(7102)
       methodAccount: Liabilities:Zuo:CreditCard:CMB:7102
 
