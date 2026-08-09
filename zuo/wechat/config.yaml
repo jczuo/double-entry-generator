@@ -245,6 +245,10 @@ wechat:
       item: 骑,单车
       targetAccount: Expenses:Transport:Bicycle
 
+    # 家政保洁
+    - item: 保洁,钟点工,家政,打扫
+      targetAccount: Expenses:Home:Cleaning
+
     - peer: Lucy,Irvin,张立,羊马菜,铃宝宝,百家乐,同学汇,胡萝卜
       type: 支出
       txType: 群收款
