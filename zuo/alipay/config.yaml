@@ -78,7 +78,7 @@ alipay:
     - peer: 中国计算机学会
       targetAccount: Expenses:Education:Training
 
-    - peer: 杭州深度求索人工智能基础技术研究有限公司
+    - peer: 杭州深度求索
       targetAccount: Expenses:Subscriptions:AI:DeepSeek
 
     - peer: Stripe Inc
@@ -138,6 +138,9 @@ alipay:
       targetAccount: Expenses:Leisure:Toys
 
     - category: 运动户外
+      targetAccount: Expenses:Leisure:Sports
+
+    - item: 羽毛球鞋,运动鞋
       targetAccount: Expenses:Leisure:Sports
 
     - category: 教育培训

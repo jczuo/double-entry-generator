@@ -62,6 +62,18 @@ wechat:
       type: 支出
       targetAccount: Expenses:Transport:Car:Charging
 
+    # EV 充电/换电
+    - peer: 国网智慧车联网技术有限公司
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Charging
+    - peer: 抚州城市能源
+      type: 支出
+      targetAccount: Expenses:Transport:Car:Charging
+    - peer: 蔚来汽车
+      type: 支出
+      item: 换电,充电
+      targetAccount: Expenses:Transport:Car:Charging
+
     - peer: 石油,中国石油
       type: 支出
       targetAccount: Expenses:Transport:Gas
